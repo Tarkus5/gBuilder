@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'password-reset-page', component: PasswordResetComponent},
   { path: 'resoconto', component: FinalizeComponent},
   { path: 'app-finalize', component: EndingFormComponent},
-  { path: 'finale', component: SendingFormComponent },
+  { path: 'scegli-il-tuo-liutaio', component: SendingFormComponent },
   { path: '**', redirectTo: 'landing-page' }
 ];
 
