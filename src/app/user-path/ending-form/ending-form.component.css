@@ -12,7 +12,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
+  height: 100vh;
 	margin: -20px 0 50px;
 }
 
@@ -94,6 +94,7 @@ input.ng-invalid.ng-touched {
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
+  margin-top: 35px;
 }
 
 .label {
@@ -109,12 +110,13 @@ input.ng-invalid.ng-touched {
   width: 66.66666667%;
   margin-top: 4%;
 }
+
 #save{
   width: 50%;
   margin-left: 190px;
   margin-top: 25px;
-
 }
+
 #back{
   width: 50%;
   margin-left: 190px;

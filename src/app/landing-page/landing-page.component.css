@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 h2{
   color: #FFFCF2;
+}
+
+.container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 p{

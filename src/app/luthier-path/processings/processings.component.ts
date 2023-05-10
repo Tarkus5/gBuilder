@@ -139,8 +139,6 @@ export class ProcessingsComponent {
                 updateDoc(docInstance, datas)
                   .then(() => { });
                 this.router.navigate(['user-page']);
-                console.log(item.data());
-                console.log(item.id);
                 return { ...item.data(), id: item.id };
               }
               else {

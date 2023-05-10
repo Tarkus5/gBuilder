@@ -24,9 +24,9 @@ const routes: Routes = [
   { path: 'processings-page', component: ProcessingsComponent },
   { path: 'guitar-style', component: GuitarStyleComponent },
   { path: 'password-reset-page', component: PasswordResetComponent},
-  { path: 'app-finalize', component: FinalizeComponent},
-  { path: 'finale', component: EndingFormComponent},
-  { path: 'scegli-il-tuo-liutaio', component: SendingFormComponent },
+  { path: 'resoconto', component: FinalizeComponent},
+  { path: 'app-finalize', component: EndingFormComponent},
+  { path: 'finale', component: SendingFormComponent },
   { path: '**', redirectTo: 'landing-page' }
 ];
 

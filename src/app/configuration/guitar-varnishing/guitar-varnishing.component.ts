@@ -118,7 +118,7 @@ export class GuitarVarnishingComponent {
     if (this.router.url !== '/guitar-configurator') {
       this.router.navigate(['user-page'])
     } else {
-      //Prende dal routing in component
+      this.router.navigate(['invia-il-tuo-progetto'])
     }
   }
 
