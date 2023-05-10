@@ -6,11 +6,6 @@
         <br>
         <label class="guitarTypeLabel" for="Meccaniche"><strong>Meccaniche</strong></label>
         <br>
-        <!--  <input class="form-check-input" type="checkbox" id="Meccaniche" name="Meccaniche" [(ngModel)]="meccaniche"  [(ngModel)]="checkbox1" (change)="onCheckboxChange()" > -->
-        <!-- <div class="alert alert-dark" role="alert" *ngIf="textColore">
-          <h3>Inserisci il colore</h3>
-          <textarea id="TextColore" name="TextColore" ></textarea>
-        </div> -->
         <div class="Options">
           <select id="Meccaniche" (change)="onSelectMeccanicheChange($event)">
             <option value="Classiche">Classiche</option>
@@ -26,7 +21,6 @@
         <br>
         <label class="guitarTypeLabel" for="PickUp"><strong>Configurazione PickUp</strong></label>
         <br>
-
         <div class="Options">
           <select id="PickUp" (change)="onSelectPickUpChange($event)">
             <option value="SSS">SSS</option>
@@ -52,7 +46,6 @@
           <select id="Binding" (change)="onSelectBindingChange($event)">
             <option value="No">No</option>
             <option value="Si">Si</option>
-
           </select>
         </div>
       </form>
@@ -163,30 +156,29 @@
         </div>
       </form>
     </div>
-
-
     <div id="altroContainer" class="d-flex align-items-center justify-content-center">
       <div>
-        <img id="altroImg" class="woodImage" src="./../../assets/Others/Nuova cartella/altro.jpg" alt="Altro" width="100">
+        <img id="altroImg" class="woodImage" src="./../../assets/Others/Nuova cartella/altro.jpg" alt="Altro"
+          width="100">
       </div>
       <div>
-        <label id="altro" class="guitarTypeLabel mb-5 ms-3" for="Altro"><strong>Aumenta il livello di personalizzazione, scrivi qui a fianco eventuali altre modifiche!</strong></label>
+        <label id="altro" class="guitarTypeLabel mb-5 ms-3" for="Altro"><strong>Aumenta il livello di personalizzazione,
+            scrivi qui a fianco eventuali altre modifiche!</strong></label>
       </div>
       <div>
         <form action="">
           <div class="alert alert-dark mt-5" role="alert">
-            <textarea id="TextAltro" style="height: 55px; width: 500px; " placeholder = "..." name="TextAltro" (input)="onTextareaInput($event)"></textarea>
+            <textarea id="TextAltro" style="height: 55px; width: 500px; " placeholder="..." name="TextAltro"
+              (input)="onTextareaInput($event)"></textarea>
           </div>
         </form>
       </div>
     </div>
-
     <div class="row rowButtons justify-content-center ">
       <div class="col-auto">
         <button class="btn btn-back" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
         <button class="btn" type="submit" (click)="emitEventFinalize()"
           [disabled]="this.finalizeDisable">Finalizza</button>
-
       </div>
     </div>
   </div>

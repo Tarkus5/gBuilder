@@ -1,25 +1,21 @@
 <div id="titolo">
   <h2>Ci siamo quasi!</h2>
-
 </div>
 <div>
   <div class="container text-center position-absolute top-50 start-50 translate-middle">
     <div class="row">
       <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
-
       </div>
     </div>
     <div class="row rigaIniziale">
       <div class="col">
         <h4>Stile Chitarra</h4>
         <p>{{body}}</p>
-
       </div>
       <div class="col">
         <h4>Orientamento</h4>
         <p>{{orientamento}}</p>
       </div>
-
       <div class="col">
         <h4>Legno Body</h4>
         <p>{{legnoBody}}</p>
@@ -48,7 +44,6 @@
       </div>
     </div>
     <div class="row align-items-center">
-
       <div class="col">
         <h4>Configurazione Pick Up</h4>
         <p>{{pickUp}}</p>
@@ -67,7 +62,6 @@
       </div>
     </div>
     <div class="row rigaModificabile colonnaColorata rigaFinale">
-
       <div class="col">
         <h4>Capotasto</h4>
         <p>{{capotasto}}</p>
@@ -89,38 +83,7 @@
       <h4>Altro</h4>
       <p>{{altro}}</p>
     </div>
-
     <button class="btn" type="submit" (click)="return()">Torna al Configuratore</button>
     <button class="btn" type="submit" (click)="next()">Concludi e salva il progetto</button>
-
   </div>
-
-  <!-- <ng-template #content let-modal  >
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Salva e Invia il tuo progetto!</h4>
-      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-    </div>
-    <div class="modal-body">
-        <div class="row">
-          <div class="col">
-            <form #f="ngForm">
-              <input type="text" placeholder="Il tuo nome" ngModel name="nomeUtente"  #utente="ngModel"/>
-              <span class="help-block" *ngIf="!utente.valid && utente.touched">Inserisci il tuo nome!</span>
-              <input type="email" placeholder="Email" ngModel name="emailUtente"  email #mail="ngModel" />
-              <span class="help-block" *ngIf="!mail.valid && mail.touched">Inserisci una mail valida!</span>
-            </form>
-          </div>
-        </div>
-
-
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="saveUser(f)">Conferma e scarica il progetto</button>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark"  >Annulla</button>
-    </div>
-  </ng-template> -->
-
-
 </div>

@@ -13,6 +13,7 @@ import { EndingFormComponent } from './user-path/ending-form/ending-form.compone
 
 import { PasswordResetComponent } from './luthier-path/luthier-form/password-reset/password-reset.component';
 import { AuthGuardGuard } from './auth-guard.guard';
+import { SendingFormComponent } from './user-path/sending-form/sending-form.component';
 
 const routes: Routes = [
   { path: 'landing-page', component: LandingPageComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'password-reset-page', component: PasswordResetComponent},
   { path: 'app-finalize', component: FinalizeComponent},
   { path: 'finale', component: EndingFormComponent},
+  { path: 'scegli-il-tuo-liutaio', component: SendingFormComponent },
   { path: '**', redirectTo: 'landing-page' }
 ];
 

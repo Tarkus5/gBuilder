@@ -1,18 +1,21 @@
 import { Component } from '@angular/core';
-import { DocumentData, Firestore, WithFieldValue, addDoc, collection } from '@angular/fire/firestore';
+import {
+  DocumentData,
+  Firestore,
+  WithFieldValue,
+  addDoc,
+  collection,
+} from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import * as FileSaver from 'file-saver';
-
 
 @Component({
   selector: 'app-ending-form',
   templateUrl: './ending-form.component.html',
-  styleUrls: ['./ending-form.component.css']
+  styleUrls: ['./ending-form.component.css'],
 })
 export class EndingFormComponent {
-
   body: any;
   battipenna: any;
   pickUp: any;
@@ -33,19 +36,18 @@ export class EndingFormComponent {
   popUp: Boolean = false;
   datiUtente: any;
 
-  constructor( private router: Router, private modalService: NgbModal, public fs: Firestore, ) { }
+  constructor(private router: Router, public fs: Firestore) {}
+
   ngOnInit(): void {
     this.getElementiChitarra();
   }
 
   return() {
-
-    this.router.navigate(['guitar-configurator'])
-
+    localStorage.clear();
+    this.router.navigate(['guitar-configurator']);
   }
 
-  getElementiChitarra() { //metodo per prendere i dati dal localstorage
-
+  getElementiChitarra() {
     this.body = localStorage.getItem('Body');
     this.legnoBody = localStorage.getItem('LegnoBody');
     this.legnoTastiera = localStorage.getItem('LegnoTastiera');
@@ -62,16 +64,12 @@ export class EndingFormComponent {
     this.meccaniche = localStorage.getItem('Meccaniche');
     this.battipenna = localStorage.getItem('Battipenna');
     this.pickUp = localStorage.getItem('PickUp');
-    this.altro = localStorage.getItem('Altro')
-
+    this.altro = localStorage.getItem('Altro');
   }
 
-
-
-  saveUser(form: NgForm) {//metodo per salvare i dati sul db
+  saveUser(form: NgForm) {
     this.datiUtente = form.value;
-
-    const data: WithFieldValue<DocumentData> = { //utilizzo il tipo WithFieldValue<DocumentData> per specificare il tipo di dato della costante data. In questo modo, TypeScript può verificare che l’oggetto data sia del tipo corretto prima di passarlo come argomento al metodo addDoc().
+    const data: WithFieldValue<DocumentData> = {
       body: this.body,
       legnoBody: this.legnoBody,
       legnoTop: this.legnoTop,
@@ -89,27 +87,18 @@ export class EndingFormComponent {
       palettaInTinta: this.palettaInTinta,
       capotasto: this.capotasto,
       altro: this.altro,
-      datiUtente: this.datiUtente
+      datiUtente: this.datiUtente,
     };
-
     const dbInstance = collection(this.fs, 'progetti');
-
-    addDoc(dbInstance, data)
-      .then(() => {
-        console.log('successo');
-      });
-
-      var resoconto = JSON.stringify(data).replaceAll('{','').replaceAll('}','').replaceAll('"','').replaceAll(',', '\n');
-
-      console.log("resoconto" + resoconto);
-
-      var blob = new Blob([resoconto], {type: "text/plain;charset=utf-8"});
-      FileSaver.saveAs (blob, "Il Mio Progetto.txt")
-
-      localStorage.clear();
+    addDoc(dbInstance, data).then(() => {});
+    var resoconto = JSON.stringify(data)
+      .replaceAll('{', '')
+      .replaceAll('}', '')
+      .replaceAll('"', '')
+      .replaceAll(',', '\n');
+    var blob = new Blob([resoconto], { type: 'text/plain;charset=utf-8' });
+    FileSaver.saveAs(blob, 'Il Mio Progetto.txt');
+    localStorage.clear();
+    this.router.navigate(['scegli-il-tuo-liutaio'])
   }
-
 }
-
-
-
