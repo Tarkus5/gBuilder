@@ -1,0 +1,60 @@
+<div class="container container-form text-center ">
+  <div class="row">
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Colors/Nitro.jpg" alt="Nitro" width="200">
+        <br>
+        <label class="guitarTypeLabel" for="Nitro"><strong>Nitro</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Nitro" name="Nitro" [(ngModel)]="nitro" [(ngModel)]="checkbox1"  (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox1">
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage rotating" src="./../../../assets/Colors/Poli.jpg" alt="Poliuretanica" width="200">
+        <br>
+        <label class="guitarTypeLabel" for="Poliuretanica"><strong>Poliuretanica</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Poliuretanica" name="Poliuretanica" [(ngModel)]="poli" [(ngModel)]="checkbox2" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox2">
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Colors/Relic.jpg" alt="Relic" width="200">
+        <br>
+        <label class="guitarTypeLabel" for="Relic"><strong>Relic</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Relic" name="Relic" [(ngModel)]="relic"  [(ngModel)]="checkbox3" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox3">
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Colors/swirl.jpg" alt="Swirl" width="200">
+        <br>
+        <label class="guitarTypeLabel" for="Swirl"><strong>Swirl</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Swirl" name="Swirl" [(ngModel)]="swirl" [(ngModel)]="checkbox4" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox4">
+      </form>
+    </div>
+    <div class="col" *ngIf="natural">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Colors/natural.jpg" alt="Natural" width="200">
+        <br>
+        <label class="guitarTypeLabel" for="Natural"><strong>Natural</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Natural" name="Natural" [(ngModel)]="natural" [(ngModel)]="checkbox5" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox5">
+      </form>
+    </div>
+    <div class="alert alert-dark" role="alert" *ngIf="textColore">
+      <h3>Inserisci il colore</h3>
+      <textarea id="TextColore" name="TextColore"  (input)="onTextareaInput($event)"></textarea>
+    </div>
+  </div>
+  <div class="row rowButtons justify-content-center">
+    <div class="col-auto">
+      <button class="btn btn-back" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
+      <button class="btn" type="submit" (click)="emitEventFinalize()" [disabled]="this.finalizeDisable" *ngIf="finalizeButton">Finalizza</button>
+      <button class="btn" type="submit" (click)="this.emitEvent()" [disabled]="this.nextDisabled" *ngIf="nextButton" >Avanti</button>
+    </div>
+  </div>
+</div>

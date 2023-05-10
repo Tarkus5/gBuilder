@@ -1,0 +1,61 @@
+<div class="container container-esterno position-absolute top-50 start-50 translate-middle" id="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+      <h2>Inserisci le seguenti informazioni</h2>
+      <form #f="ngForm">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Ragione Sociale" name="ragioneSociale"
+                [(ngModel)]="ragioneSociale" required #ragione_sociale="ngModel">
+              <span class="help-block" *ngIf="!ragione_sociale.valid && ragione_sociale.touched">Questo campo non può
+                rimanere vuoto</span>
+            </div>
+            <div class="col">
+              <input type="text" numbersOnly class="form-control" placeholder="Partita IVA" name="partitaIva"
+                [(ngModel)]="partitaIva" maxlength="11" #partita_iva="ngModel">
+              <span class="help-block" *ngIf="!partita_iva.valid && partita_iva.touched">Inserisci una partita IVA
+                valida</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Città" name="citta" [(ngModel)]="cittaUtente"
+                required #citta="ngModel">
+              <span class="help-block" *ngIf="!citta.valid && citta.touched">Questo campo non può rimanere vuoto</span>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Indirizzo" name="indirizzo"
+                [(ngModel)]="indirizzoUtente" required #indirizzo="ngModel">
+              <span class="help-block" *ngIf="!indirizzo.valid && indirizzo.touched">Questo campo non può rimanere
+                vuoto</span>
+            </div>
+          </div>
+          <label class="label" for="shipping">Effettui spedizioni?</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="spedizione" id="inlineRadio1" value="Si" ngModel
+                [(ngModel)]="spedizioni">
+              <label class="form-check-label" for="inlineRadio1">Sì</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="spedizione" id="inlineRadio2" value="No"
+                [(ngModel)]="spedizioni">
+              <label class="form-check-label" for="inlineRadio2">No</label>
+            </div>
+          </div>
+          <select class="form-select" name="formaPagamento" aria-label="Default select example" [(ngModel)]="pagamenti"
+            required #formaPagamento="ngModel">
+            <option value="nonSelezionato">Seleziona il metodo di pagamento preferito</option>
+            <option value="Bonifico">Bonifico</option>
+            <option value="Paypal">PayPal</option>
+            <option value="Visa-Mastercard">Visa/Mastercard</option>
+            <option value="Contrassegno">Contrassegno</option>
+          </select>
+          <button (click)="openProductionPage(f)" class="btn" type="submit" [disabled]="!f.valid">Avanti</button>
+        </div>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>

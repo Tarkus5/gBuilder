@@ -1,0 +1,94 @@
+.container {
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #252422;
+	background-color: #252422;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+  /* margin-top: 25px; */
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:hover{
+  background-color: #EB5E28;
+  color: #FFF;
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+.btn-back{
+  margin-right: 20px;
+}
+
+.form-check-input {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+label {
+  margin-top: 10px;
+  /* margin-bottom: 2px; */
+}
+
+.rowButtons {
+  margin-top: 40px;
+}
+#TextColore{
+  margin-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.alert {
+  margin-top: 35px;
+}
+.Options{
+  margin-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#altro{
+  font-size: medium;
+  width: 600px;
+  padding-top: 75px;
+  text-align:left;
+}
+#altroImg{
+ padding-top: 15px;
+ float: right;
+ padding-right: 10px;
+}
+#TextAltro{
+
+  display: block;
+  margin: 0 auto;
+  /* padding: 15px; */
+}
+ *
+#altroContainer {
+  margin: 0 auto;
+}

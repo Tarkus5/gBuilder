@@ -1,0 +1,192 @@
+<div class="container container-form text-center ">
+  <div class="row">
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../assets/Others/Nuova cartella/meccaniche.jpg" alt="Meccaniche" width="175">
+        <br>
+        <label class="guitarTypeLabel" for="Meccaniche"><strong>Meccaniche</strong></label>
+        <br>
+        <!--  <input class="form-check-input" type="checkbox" id="Meccaniche" name="Meccaniche" [(ngModel)]="meccaniche"  [(ngModel)]="checkbox1" (change)="onCheckboxChange()" > -->
+        <!-- <div class="alert alert-dark" role="alert" *ngIf="textColore">
+          <h3>Inserisci il colore</h3>
+          <textarea id="TextColore" name="TextColore" ></textarea>
+        </div> -->
+        <div class="Options">
+          <select id="Meccaniche" (change)="onSelectMeccanicheChange($event)">
+            <option value="Classiche">Classiche</option>
+            <option value="Autobloccanti">Autobloccanti</option>
+            <option value="Vintage">Vintage</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../assets/Others/Nuova cartella/pickUp.jpg" alt="PickUp" width="175">
+        <br>
+        <label class="guitarTypeLabel" for="PickUp"><strong>Configurazione PickUp</strong></label>
+        <br>
+
+        <div class="Options">
+          <select id="PickUp" (change)="onSelectPickUpChange($event)">
+            <option value="SSS">SSS</option>
+            <option value="HSS">HSS</option>
+            <option value="HH">HH</option>
+            <option value="SS">SS</option>
+            <option value="HSH">HSH</option>
+            <option value="SH">SH</option>
+            <option value="H">H</option>
+            <option value="P90">P90</option>
+            <option value="P90x2">P90x2</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../assets/Others/Nuova cartella/binding.jpg" alt="Binding" width="175">
+        <br>
+        <label class="guitarTypeLabel" for="Binding"><strong>Binding</strong></label>
+        <br>
+        <div class="Options">
+          <select id="Binding" (change)="onSelectBindingChange($event)">
+            <option value="No">No</option>
+            <option value="Si">Si</option>
+
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../assets/Others/Nuova cartella/battipenna.png" alt="Battipenna" width="175">
+        <br>
+        <label class="guitarTypeLabel" for="Battipenna"><strong>Battipenna</strong></label>
+        <br>
+        <div class="Options">
+          <select id="Battipenna" (change)="onSelectBattipennaChange($event)">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../assets/Others/Nuova cartella/ponte!.jpg" alt="Ponte" width="175">
+        <br>
+        <label class="guitarTypeLabel" for="Natural"><strong>Ponte</strong></label>
+        <br>
+        <div class="Options">
+          <select id="Ponte" (change)="onSelectPonteChange($event)">
+            <option value="Fisso">Fisso</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Floyd Rose">Floyd Rose</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../assets/Others/Nuova cartella/capotasto.jpeg" alt="Capotasto" width="175">
+        <br>
+        <label class="guitarTypeLabel" for="Natural"><strong>Capotasto</strong></label>
+        <br>
+        <div class="Options">
+          <select id="Capotasto" (change)="onSelectCapotastoChange($event)">
+            <option value="Plastica">Plastica</option>
+            <option value="Grafene">Grafene</option>
+            <option value="Osso">Osso</option>
+            <option value="Ottone">Ottone</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../assets/Others/Nuova cartella/straps.jpg" alt="Straps" width="175">
+        <br>
+        <label class="guitarTypeLabel" for="Straps"><strong>Straps</strong></label>
+        <br>
+        <div class="Options">
+          <select id="Straps" (change)="onSelectStrapsChange($event)">
+            <option value="Standard">Standard</option>
+            <option value="StrapLock">StrapLock</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../assets/Others/Nuova cartella/manopole.jpg" alt="Manopole" width="175">
+        <br>
+        <label class="guitarTypeLabel" for="Manopole"><strong>Manopole</strong></label>
+        <br>
+        <div class="Options">
+          <select id="Manopole" (change)="onSelectManopoleChange($event)">
+            <option value="Strato Style">Strato Style</option>
+            <option value="Gibson Style">Gibson Style</option>
+            <option value="Steel Style">Steel Style</option>
+            <option value="Strato Vintage Style">Strato Vintage Style</option>
+            <option value="Gibson Vintage Style">Gibson Vintage Style</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../assets/Others/Nuova cartella/paletta.jpg" alt="Paletta" width="175">
+        <br>
+        <label class="guitarTypeLabel" for="Paletta"><strong>Paletta in tinta</strong></label>
+        <br>
+        <div class="Options">
+          <select id="Paletta" (change)="onSelectPalettaChange($event)">
+            <option value="No">No</option>
+            <option value="Si">Si</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="woodImage" src="./../../assets/Others/Nuova cartella/mancina.jpg" alt="Orientamento" width="175">
+        <br>
+        <label class="guitarTypeLabel" for="Orientamento"><strong>Orientamento</strong></label>
+        <br>
+        <div class="Options">
+          <select id="Orientamento" (change)="onSelectOrientamentoChange($event)">
+            <option value="Classica">Classica</option>
+            <option value="Mancina">Mancina</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+
+    <div id="altroContainer" class="d-flex align-items-center justify-content-center">
+      <div>
+        <img id="altroImg" class="woodImage" src="./../../assets/Others/Nuova cartella/altro.jpg" alt="Altro" width="100">
+      </div>
+      <div>
+        <label id="altro" class="guitarTypeLabel mb-5 ms-3" for="Altro"><strong>Aumenta il livello di personalizzazione, scrivi qui a fianco eventuali altre modifiche!</strong></label>
+      </div>
+      <div>
+        <form action="">
+          <div class="alert alert-dark mt-5" role="alert">
+            <textarea id="TextAltro" style="height: 55px; width: 500px; " placeholder = "..." name="TextAltro" (input)="onTextareaInput($event)"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row rowButtons justify-content-center ">
+      <div class="col-auto">
+        <button class="btn btn-back" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
+        <button class="btn" type="submit" (click)="emitEventFinalize()"
+          [disabled]="this.finalizeDisable">Finalizza</button>
+
+      </div>
+    </div>
+  </div>

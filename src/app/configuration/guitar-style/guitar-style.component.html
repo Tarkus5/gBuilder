@@ -1,0 +1,82 @@
+<div class="container text-center ">
+  <div class="row aligns-item-center">
+    <div class="col">
+      <form action="">
+        <img src="./../../../assets/Guitars/Stratocaster.png" alt="ST Type" width="100">
+        <br>
+        <label class="guitarTypeLabel" for="stType"><strong>ST Style</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Stratocaster" name="Stratocaster" [(ngModel)]="Strato"  [(ngModel)]="checkbox1" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox1"  >
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img src="./../../../assets/Guitars/Telecaster.png" alt="T Type" width="100">
+        <br>
+        <label class="guitarTypeLabel" for="teleType"><strong>T Style</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Telecaster" name="Telecaster" [(ngModel)]="Tele"  [(ngModel)]="checkbox2" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox2"   >
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img src="./../../../assets/Guitars/Les Paul.png" alt="LP Type" width="100">
+        <br>
+        <label class="guitarTypeLabel" for="lesPaulType"><strong>LP Style</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="LesPaul" name="LesPaul" [(ngModel)]="lesPaul" [(ngModel)]="checkbox3" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox3"  >
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img src="./../../../assets/Guitars/Diavoletto.png" alt="SG Type" width="100">
+        <br>
+        <label class="guitarTypeLabel" for="sgType"><strong>SG Style</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="SG" name="SG" [(ngModel)]="Diavoletto" [(ngModel)]="checkbox4" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox4" >
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img src="./../../../assets/Guitars/335.png" alt="HB Type" width="100">
+        <br>
+        <label class="guitarTypeLabel" for="hollowbodyType"><strong>HB Style</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Hollowbody" name="Hollowbody" [(ngModel)]="hb" [(ngModel)]="checkbox5"  (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox5"  >
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img src="./../../../assets/Guitars/FlyingV.png" alt="V Type" width="100">
+        <br>
+        <label class="guitarTypeLabel" for="vType"><strong>V Style</strong></label>
+        <br>
+
+        <input class="form-check-input" type="checkbox" id="Flying V" name="Flying V"  [(ngModel)]="v" [(ngModel)]="checkbox6" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox6"  >
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img src="./../../../assets/Guitars/Progetto senza titolo (3).png" alt="EX Type" width="100">
+        <br>
+        <label class="guitarTypeLabel" for="Explorer"><strong>EX Style</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Explorer" name="Explorer" [(ngModel)]="Ex" [(ngModel)]="checkbox7" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox7"  >
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img src="./../../../assets/Guitars/SpecialProject.png" alt="Special Type" width="100">
+        <br>
+        <label class="guitarTypeLabel" for="specialType"><strong>Special Style</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Special" name="Special" [(ngModel)]="Speciale" [(ngModel)]="checkbox8" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox8"  >
+      </form>
+    </div>
+  </div>
+  <div class="row rowButtons justify-content-center" *ngIf="showAvanti">
+    <div class="col-auto">
+      <button class="btn" type="submit" (click)="this.emitEvent()" [disabled]="this.nextDisabled" >Avanti</button>
+    </div>
+  </div>
+</div>

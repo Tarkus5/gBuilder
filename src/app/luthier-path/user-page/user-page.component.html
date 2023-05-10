@@ -1,0 +1,62 @@
+<div class="container text-center position-absolute top-50 start-50 translate-middle">
+  <div class="row rigaIniziale">
+    <div class="col align-self-center">
+      <h4>Username</h4>
+      <p *ngFor="let item of data">{{ item.username }}</p>
+    </div>
+    <div class="col align-self-center">
+      <h4>Email</h4>
+      <p *ngFor="let item of data">{{ item.mail }}</p>
+    </div>
+    <div class="col align-self-center">
+      <h4>Ragione Sociale</h4>
+      <p *ngFor="let item of data">{{ item.ragioneSociale }}</p>
+    </div>
+  </div>
+  <div class="row rigaModificabile colonnaColorata">
+    <div class="col align-self-center">
+      <h4>Partita IVA</h4>
+      <p *ngFor="let item of data">{{ item.partitaIva }}</p>
+    </div>
+    <div class="col align-self-center">
+      <h4>Città</h4>
+      <p *ngFor="let item of data">{{ item.citta }}</p>
+    </div>
+    <div class="col align-self-center">
+      <h4>Indirizzo</h4>
+      <p *ngFor="let item of data">{{ item.indirizzo }}</p>
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col align-self-center">
+      <h4>Spedizione</h4>
+      <p *ngFor="let item of data">{{ item.spedizione }}</p>
+    </div>
+    <div class="col align-self-center">
+      <h4>Metodo di Pagamento Preferito</h4>
+      <p *ngFor="let item of data">{{ item.formaPagamento }}</p>
+    </div>
+    <div class="col align-self-center">
+      <h4>Lavorazioni Body</h4>
+      <p *ngFor="let item of data">{{ item.GuitarStyles }}</p>
+    </div>
+  </div>
+  <div class="row rigaModificabile colonnaColorata rigaFinale">
+    <div class="col align-self-center">
+      <h4>Legni</h4>
+      <p *ngFor="let item of data">{{ item.GuitarWoods }}</p>
+    </div>
+    <div class="col align-self-center">
+      <h4>Verniciature</h4>
+      <p *ngFor="let item of data">{{ item.GuitarVarnishing }}</p>
+    </div>
+    <div class="col align-self-center">
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-outline-dark editModeButton" (click)="editMode()"><b>Modifica il tuo
+              profilo</b></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

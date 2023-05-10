@@ -1,0 +1,42 @@
+<div class="container position-absolute top-50 start-50 translate-middle" id="container">
+	<div class="form-container sign-up-container">
+		<form #g="ngForm">
+			<h1>Crea il tuo account</h1>
+			<input type="text" placeholder="Username" ngModel name="username" required #username="ngModel"/>
+      <span class="help-block" *ngIf="!username.valid && username.touched">Questo campo non può rimanere vuoto</span>
+			<input type="email" placeholder="Email" ngModel name="mail" required email #mail="ngModel">
+      <span class="help-block" *ngIf="!mail.valid && mail.touched">Inserisci una mail valida</span>
+			<input type="password" placeholder="Password" ngModel name="password" required [minLength]="6" #password="ngModel" passwordStrength/>
+      <span class="help-block" *ngIf="!password.valid && password.touched">Questo campo non può rimanere vuoto</span>
+      <div class="help-block helpGrosso" *ngIf= "!password.valid && password.errors?.['passwordStrength']">
+        La password deve contenere una lettera minuscola, una maiuscola, un numero ed un carattere speciale
+      </div>
+			<button (click)="openAdvancedForm(g)" class="btn" type="submit" [disabled]="!g.valid">Registrati</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+			<h1>Accedi</h1>
+			<input type="email" placeholder="Email" ngModel name="email" required email #email="ngModel"/>
+      <span class="help-block" *ngIf="!email.valid && email.touched">Questo campo non può rimanere vuoto</span>
+			<input type="password" placeholder="Password" ngModel name="password" required #passwordLogin="ngModel"/>
+      <span class="help-block" *ngIf="!passwordLogin.valid && passwordLogin.touched">Questo campo non può rimanere vuoto</span>
+			<a class="forgotPassword" role="button" (click)="passwordResetPage()">Hai dimenticato la password?</a>
+			<button (click)="openUserPage(f)" class="btn" type="submit" [disabled]="!f.valid">Accedi</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bentornato!</h1>
+				<p><strong>Inserisci i tuoi dati ed effettua l'accesso.</strong></p>
+				<button class="ghost" id="signIn">Entra</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Non sei ancora registrato?</h1>
+				<p><strong>Registrati oggi e inizia subito a vendere le tue chitarre custom.</strong></p>
+				<button class="ghost" id="signUp">Registrati subito!</button>
+			</div>
+		</div>
+	</div>
+</div>

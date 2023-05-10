@@ -1,0 +1,15 @@
+<nav class="nav navbar justify-content-start">
+  <div class="container">
+    <div class="col">
+      <a class="navbar-brand" aria-current="page" role="button" (click)="onClickRouter()">
+        <img src="../assets/gBuilder-logo-removebg-preview.png" width="225px">
+      </a>
+    </div>
+    <div class="align-items-right" *ngIf="isLoggedIn">
+      <button class="btn btn-outline-danger logoutButton justify-content-end"
+        (click)="logOut()">Effettua il logout</button>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<app-spinner></app-spinner>

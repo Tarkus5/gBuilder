@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 1, 'pageactive': this.serviceWood.selectedTab != 1}"
+        aria-current="page">Stili chitarre</a>
+      </li>
+      <li class="nav-item" *ngIf="showWoods">
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 2, 'pageactive': this.serviceWood.selectedTab != 2}">Legni</a>
+      </li>
+      <li class="nav-item" *ngIf="showListParts">
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 3, 'pageactive': this.serviceWood.selectedTab != 3}">Legno Body</a>
+      </li>
+      <li class="nav-item" *ngIf="showListParts">
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 4, 'pageactive': this.serviceWood.selectedTab != 4}">Legno Top</a>
+      </li>
+      <li class="nav-item" *ngIf="showListParts">
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 5, 'pageactive': this.serviceWood.selectedTab != 5}">Legno Manico</a>
+      </li>
+      <li class="nav-item" *ngIf="showListParts">
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 6, 'pageactive': this.serviceWood.selectedTab != 6}">Legno Tastiera</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 7, 'pageactive': this.serviceWood.selectedTab != 7}">Verniciature</a>
+      </li>
+      <li class="nav-item" *ngIf="other">
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 8, 'pageactive': this.serviceWood.selectedTab != 8}">Accessori</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<app-guitar-style *ngIf="this.serviceWood.selectedTab == 1" (nextClick)="onNextClickStyles()" ></app-guitar-style>
+<app-guitar-woods *ngIf="this.serviceWood.selectedTab == 2" (nextClick)="onNextClick()" (previousClick)="onPreviousClickWood()"></app-guitar-woods>
+<app-guitar-woods *ngIf="this.serviceWood.selectedTab == 3" (nextClick)="onNextClick()" (previousClick)="onPreviousClickWood()"></app-guitar-woods>
+<app-guitar-woods *ngIf="this.serviceWood.selectedTab == 4" (nextClick)="onNextClick()" (previousClick)="onPreviousClick()"></app-guitar-woods>
+<app-guitar-woods *ngIf="this.serviceWood.selectedTab == 5" (nextClick)="onNextClick()" (previousClick)="onPreviousClick()"></app-guitar-woods>
+<app-guitar-woods class="spacing" *ngIf="this.serviceWood.selectedTab == 6" (nextClick)="onNextClick()" (previousClick)="onPreviousClick()"></app-guitar-woods>
+<app-guitar-varnishing *ngIf="this.serviceWood.selectedTab == 7" (finalizeClick)="onFinalizeClick()" (nextClick)="onNextClick()" (previousClick)="onPreviousClick()"></app-guitar-varnishing>
+<app-altro-form *ngIf="this.serviceWood.selectedTab == 8" (nextClick)="onNextClick()" (previousClick)="onPreviousClick()"></app-altro-form>

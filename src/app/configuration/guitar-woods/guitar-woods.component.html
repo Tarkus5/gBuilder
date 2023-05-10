@@ -1,0 +1,190 @@
+<div class="container text-center ">
+  <div class="row aligns-item-center">
+    <div class="col" *ngIf="this.serviceWood.visiblePau">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Woods/Pau Ferro.jpg" alt="Pau Ferro" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Pau Ferro"><strong>Pau Ferro</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Pau Ferro" name="Pau Ferro"
+          [(ngModel)]="this.serviceWood.pauFerro" [(ngModel)]="pauFerro" [(ngModel)]="this.checkbox8" (change)="onCheckboxChange()"
+          [disabled]="disableCheckboxes && !checkbox8">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visiblePalissandro">
+      <form action="">
+        <img class="woodImage woodImageSecondRow" src="./../../../assets/Woods/Palissandro.jpg" alt="Palissandro"
+          width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Palissandro"><strong>Palissandro</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Palissandro" name="Palissando"
+          [(ngModel)]="this.serviceWood.palissandro" [(ngModel)]="this.checkbox13" [(ngModel)]="palissandro" (change)="onCheckboxChange()"
+          [disabled]="disableCheckboxes && !this.checkbox13">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleEbano">
+      <form action="">
+        <img class="woodImage woodImageSecondRow" src="./../../../assets/Woods/Ebano.jpg" alt="Ebano" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Ebano"><strong>Ebano</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Ebano" name="Ebano" [(ngModel)]="ebano" [(ngModel)]="this.serviceWood.ebano"
+          [(ngModel)]="this.checkbox14" (change)="onCheckboxChange()"
+          [disabled]="disableCheckboxes && !this.checkbox14">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleAcero">
+      <form action="">
+        <img class="woodImage woodImageSecondRow" src="./../../../assets/Woods/Acero.jpg" alt="Acero" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Acero"><strong>Acero</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Acero" name="Acero" [(ngModel)]="acero" [(ngModel)]="this.serviceWood.acero"
+          [(ngModel)]="checkbox16" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox16">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleCiliegio">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Woods/Ciliegio.jpg" alt="Ciliegio" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Ciliegio"><strong>Ciliegio</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Ciliegio" name="Ciliegio" [(ngModel)]="ciliegio"
+          [(ngModel)]="this.serviceWood.ciliegio" [(ngModel)]="checkbox1" (change)="onCheckboxChange()"
+          [disabled]="disableCheckboxes && !this.checkbox1">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleSapele">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Woods/Sapele.jpg" alt="Sapele" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Sapele"><strong>Sapele</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Sapele" name="Sapele" [(ngModel)]="sapele" [(ngModel)]="this.serviceWood.sapele"
+          [(ngModel)]="checkbox3" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !this.checkbox3">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleAbete">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Woods/Abete.jpg" alt="Abete" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Abete"><strong>Abete</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Abete" name="Abete" [(ngModel)]="abete" [(ngModel)]="this.serviceWood.abete"
+          [(ngModel)]="checkbox4" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !this.checkbox4">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visiblePioppo">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Woods/Pioppo.jpg" alt="Pioppo" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Pioppo"><strong>Pioppo</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Pioppo" name="Pioppo" [(ngModel)]="pioppo" [(ngModel)]="this.serviceWood.pioppo"
+          [(ngModel)]="checkbox5" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !this.checkbox5">
+      </form>
+    </div>
+  </div>
+  <div class="row rowWoods">
+    <div class="col" *ngIf="this.serviceWood.visiblePino">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Woods/Pino.jpg" alt="Pino" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Pino"><strong>Pino</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Pino" name="Pino" [(ngModel)]="pino" [(ngModel)]="this.serviceWood.pino"
+          [(ngModel)]="checkbox6" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !this.checkbox6">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleOkume">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Woods/Okumé.jpg" alt="Okumé" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Okumé"><strong>Okumé</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Okume" name="Okume" [(ngModel)]="okume" [(ngModel)]="this.serviceWood.okume"
+          [(ngModel)]="checkbox7" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !this.checkbox7">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleMogano">
+      <form action="">
+        <img class="woodImage woodImageSecondRow" src="./../../../assets/Woods/Mogano.jpg" alt="Mogano" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Mogano"><strong>Mogano</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Mogano" name="Mogano" [(ngModel)]="mogano" [(ngModel)]="this.serviceWood.mogano"
+          [(ngModel)]="checkbox9" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox9">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleFrassino">
+      <form action="">
+        <img class="woodImage woodImageSecondRow" src="./../../../assets/Woods/Frassino.jpg" alt="Frassino" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Frassino"><strong>Frassino</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Frassino" name="Frassino" [(ngModel)]="frassino"
+          [(ngModel)]="this.serviceWood.frassino" [(ngModel)]="checkbox10" (change)="onCheckboxChange()"
+          [disabled]="disableCheckboxes && !this.checkbox10">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleOntano">
+      <form action="">
+        <img class="woodImage woodImageSecondRow" src="./../../../assets/Woods/Ontano.jpg" alt="Alder" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Alder"><strong>Alder</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Alder" name="Alder" [(ngModel)]="alder" [(ngModel)]="this.serviceWood.alder"
+          [(ngModel)]="checkbox11" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !this.checkbox11">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleTiglio">
+      <form action="">
+        <img class="woodImage woodImageSecondRow" src="./../../../assets/Woods/Tiglio.jpg" alt="Tiglio" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Tiglio"><strong>Tiglio</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Tiglio" name="Tiglio" [(ngModel)]="tiglio" [(ngModel)]="this.serviceWood.tiglio"
+          [(ngModel)]="checkbox15" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !this.checkbox15">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleKoa">
+      <form action="">
+        <img class="woodImage" src="./../../../assets/Woods/Koa Hawaiano.jpg" alt="KoaHawaiano" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Koa Hawaiano"><strong>Koa Hawaiano</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="KoaHawaiano" name="KoaHawaiano" [(ngModel)]="koa"
+          [(ngModel)]="this.serviceWood.koa" [(ngModel)]="checkbox2" (change)="onCheckboxChange()"
+          [disabled]="disableCheckboxes && !checkbox2">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleAlder">
+      <form action="">
+        <img class="woodImage woodImageSecondRow" src="./../../../assets/Woods/Noce.jpg" alt="Noce" width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Noce"><strong>Noce</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Noce" name="Noce" [(ngModel)]="noce" [(ngModel)]="this.serviceWood.noce"
+          [(ngModel)]="checkbox12" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !this.checkbox12">
+      </form>
+    </div>
+    <div class="col" *ngIf="this.serviceWood.visibleNiente">
+      <form action="">
+        <img class="woodImage woodImageSecondRow" src="./../../../assets/Others/Nuova cartella/nullo.jpeg" alt="Nessuno"
+          width="100">
+        <br>
+        <label class="guitarWoodLabel" for="Niente"><strong>Nessun Top</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Niente" name="Niente" [(ngModel)]="this.serviceWood.niente"
+          [(ngModel)]="this.checkbox17" (change)="onCheckboxChange()"
+          [disabled]="disableCheckboxes && !this.checkbox17">
+      </form>
+    </div>
+    <div class="row rowButtons justify-content-center" *ngIf="showButton">
+      <div class="col-auto">
+        <button class="btn btn-back" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
+        <button class="btn" type="submit" (click)="this.emitEvent()" [disabled]="this.nextDisabled">Avanti</button>
+      </div>
+    </div>
+  </div>

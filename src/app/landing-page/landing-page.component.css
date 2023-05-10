@@ -1,0 +1,49 @@
+h2{
+  color: #FFFCF2;
+}
+
+p{
+  color: #FFFCF2;
+}
+
+.userTab, .luthierTab{
+  background-color: #403D39;
+  border-radius: 2.5%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #EB5E28;
+	background-color: #EB5E28;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+  margin-top: 25px;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+button:focus {
+	outline: none;
+}
+
+.img{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 35px;
+  filter: drop-shadow(7px 7px 7px #666666);
+  -webkit-filter: drop-shadow(7px 7px 7px #666666);
+}
