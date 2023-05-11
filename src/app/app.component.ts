@@ -31,7 +31,7 @@ export class AppComponent implements OnInit, OnChanges {
     if (user !== null) {
       this.isLoggedIn = true;
     } else {
-      this.router.navigate(['landing-page']);
+      this.isLoggedIn = false;
     }
   }
 

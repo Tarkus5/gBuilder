@@ -58,7 +58,7 @@ export class AltroFormComponent {
     if (this.router.url !== '/guitar-configurator') {
       this.router.navigate(['user-page']);
     } else {
-      this.router.navigate(['app-finalize']);
+      this.router.navigate(['resoconto']);
     }
   }
 

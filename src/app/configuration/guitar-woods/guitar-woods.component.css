@@ -61,3 +61,7 @@ label {
 .rowWoods {
   margin-top: 20px;
 }
+
+img {
+  border-radius: 10px;
+}

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
@@ -28,7 +29,7 @@ import { SendingFormComponent } from './user-path/sending-form/sending-form.comp
 import { EndingFormComponent } from './user-path/ending-form/ending-form.component';
 import { AltroFormComponent } from './user-path/altro-form/altro-form.component';
 import { FinalizeComponent } from './user-path/finalize/finalize.component';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 @NgModule({
@@ -50,14 +51,16 @@ import { FinalizeComponent } from './user-path/finalize/finalize.component';
     AltroFormComponent,
     FinalizeComponent,
     SendingFormComponent,
-    EndingFormComponent,
+    EndingFormComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
     HttpClientModule,
+    CarouselModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),

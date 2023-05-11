@@ -110,6 +110,6 @@ export class FinalizeComponent implements OnInit {
     this.battipenna = localStorage.setItem('Battipenna', this.battipenna);
     this.pickUp = localStorage.setItem('PickUp', this.pickUp);
     this.altro = localStorage.setItem('Altro', this.altro);
-    this.router.navigate(['finale']);
+    this.router.navigate(['app-finalize']);
   }
 }
