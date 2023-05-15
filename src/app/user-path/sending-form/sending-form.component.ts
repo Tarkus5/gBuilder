@@ -46,8 +46,6 @@ export class SendingFormComponent {
       getDocs(dbInstance).then((data) => {
         this.data = [
           ...data.docs.map((item) => {
-            console.log(item.data());
-
               return { ...item.data(), id: item.get('mail') };
           }),
         ];

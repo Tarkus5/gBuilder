@@ -16,7 +16,6 @@ export class PasswordResetComponent {
 
   passwordReset(form: NgForm) {
     const email = form.value.email;
-    console.log(email);
     sendPasswordResetEmail(this.auth, email)
     .then(() => {
       window.alert('Link inviato! Controlla la tua casella di posta elettronica!')
