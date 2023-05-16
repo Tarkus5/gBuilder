@@ -47,7 +47,7 @@
     </div>
     <div class="alert alert-dark" role="alert" *ngIf="textColore">
       <h3>Inserisci il colore</h3>
-      <textarea id="TextColore" name="TextColore"  (input)="onTextareaInput($event)"></textarea>
+      <textarea id="TextColore" name="TextColore" [value]="valueColore" (input)="onTextareaInput($event)"></textarea>
     </div>
   </div>
   <div class="row rowButtons justify-content-center">

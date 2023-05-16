@@ -38,7 +38,6 @@ export class FinalizeComponent implements OnInit {
   }
 
   return() {
-    localStorage.clear();
     this.router.navigate(['guitar-configurator']);
   }
 
