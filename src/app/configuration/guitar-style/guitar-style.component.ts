@@ -160,33 +160,37 @@ export class GuitarStyleComponent implements OnInit, OnChanges {
         this.disableCheckboxes = false;
       }
     }
-    if (this.Strato) {
-      this.dataLocalStorage = 'Stratocaster';
-      this.localstorage.setItem('Body', this.dataLocalStorage);
-    } else if (this.Tele) {
-      this.dataLocalStorage = 'Telecaster';
-      this.localstorage.setItem('Body', this.dataLocalStorage);
-    } else if (this.lesPaul) {
-      this.dataLocalStorage = 'LesPaul';
-      this.localstorage.setItem('Body', this.dataLocalStorage);
-    } else if (this.Diavoletto) {
-      this.dataLocalStorage = 'SG';
-      this.localstorage.setItem('Body', this.dataLocalStorage);
-    } else if (this.hb) {
-      this.dataLocalStorage = 'Hollowbody';
-      this.localstorage.setItem('Body', this.dataLocalStorage);
-    } else if (this.v) {
-      this.dataLocalStorage = 'Flying V';
-      this.localstorage.setItem('Body', this.dataLocalStorage);
-    } else if (this.Ex) {
-      this.dataLocalStorage = 'Explorer';
-      this.localstorage.setItem('Body', this.dataLocalStorage);
-    } else if (this.Speciale) {
-      this.dataLocalStorage = 'Special';
-      this.localstorage.setItem('Body', this.dataLocalStorage);
-    }
-    else {
-      localStorage.removeItem('Body');
+    if(this.router.url === '/guitar-configurator') {
+      if (this.Strato) {
+        this.dataLocalStorage = 'Stratocaster';
+        this.localstorage.setItem('Body', this.dataLocalStorage);
+      } else if (this.Tele) {
+        this.dataLocalStorage = 'Telecaster';
+        this.localstorage.setItem('Body', this.dataLocalStorage);
+      } else if (this.lesPaul) {
+        this.dataLocalStorage = 'LesPaul';
+        this.localstorage.setItem('Body', this.dataLocalStorage);
+      } else if (this.Diavoletto) {
+        this.dataLocalStorage = 'SG';
+        this.localstorage.setItem('Body', this.dataLocalStorage);
+      } else if (this.hb) {
+        this.dataLocalStorage = 'Hollowbody';
+        this.localstorage.setItem('Body', this.dataLocalStorage);
+      } else if (this.v) {
+        this.dataLocalStorage = 'Flying V';
+        this.localstorage.setItem('Body', this.dataLocalStorage);
+      } else if (this.Ex) {
+        this.dataLocalStorage = 'Explorer';
+        this.localstorage.setItem('Body', this.dataLocalStorage);
+      } else if (this.Speciale) {
+        this.dataLocalStorage = 'Special';
+        this.localstorage.setItem('Body', this.dataLocalStorage);
+      }
+      else {
+        localStorage.removeItem('Body');
+      }
+    } else{
+      
     }
   }
 

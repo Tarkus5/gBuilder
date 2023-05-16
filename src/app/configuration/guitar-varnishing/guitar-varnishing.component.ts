@@ -150,6 +150,7 @@ export class GuitarVarnishingComponent {
         this.natural = true;
       }
     }
+   if(this.router.url === '/guitar-configurator') {
     if (this.checkbox1) {
       this.dataLocalStorage[0] = 'Nitro';
       this.localStorage.setItem('Verniciatura', JSON.stringify(this.dataLocalStorage))
@@ -169,6 +170,9 @@ export class GuitarVarnishingComponent {
     else {
       localStorage.removeItem('Verniciatura');
     }
+   } else {
+    
+   }
   }
 
   onTextareaInput(colore: any): void {
