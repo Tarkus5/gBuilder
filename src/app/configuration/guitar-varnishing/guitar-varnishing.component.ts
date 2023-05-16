@@ -52,8 +52,9 @@ export class GuitarVarnishingComponent {
   cancel(): void { }
 
   ngOnInit() {
-    this.checkLocalStorageColore();
+
     if (this.router.url == '/guitar-configurator') {
+      this.dataVerniciatura = localStorage.getItem('Verniciatura');
       switch (this.dataVerniciatura) {
         case 'Nitro': {
           this.checkbox1 = true;
@@ -77,6 +78,7 @@ export class GuitarVarnishingComponent {
         }
       }
       this.checkCheckbox()
+      this.checkLocalStorageColore();
       this.nextButton = true;
       this.natural = true;
     } else {
