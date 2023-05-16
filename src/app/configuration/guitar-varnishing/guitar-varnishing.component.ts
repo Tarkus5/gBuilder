@@ -60,7 +60,7 @@ export class GuitarVarnishingComponent {
           this.checkbox1 = true;
           break;
         }
-        case 'Poli': {
+        case 'Poliuretanica': {
           this.checkbox2 = true;
           break;
         }
