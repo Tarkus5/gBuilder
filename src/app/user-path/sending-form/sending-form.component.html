@@ -1,1 +1,16 @@
-<p>sending-form works!</p>
+<div class="container">
+  <h2>Scegli il tuo liutaio!</h2>
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let item of data">
+      <ng-template *ngIf="item.spedizione === 'Si'" carouselSlide [id]="data.id">
+        <img src="./../../../assets/IconSelezioneLiutaio_C4.png" alt="luthierImage" width="100">
+        <h4>{{ item.ragioneSociale }}</h4>
+        <p class="indirizzo"><i>{{ item.indirizzo }}, {{ item.citta }}</i></p>
+        <a
+        href="mailto:{{ item.mail }}?body= *Allega a questa mail il documento che hai scaricato, dopodichè, cancella questa nota!*"
+        class="btn" >Contatta {{ item.ragioneSociale }}</a>
+        <p class="spedizione"><i>Ordina ora e ricevi comodamente a casa tua!</i></p>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>

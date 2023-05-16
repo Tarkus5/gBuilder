@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #EB5E28;
+}
+
+.owl-carousel.owl-drag .owl-item {
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  border-width: thin;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.owl-carousel .owl-item img {
+  display: flex;
+  width: 20%;
+}
