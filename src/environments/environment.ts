@@ -6,4 +6,6 @@ export const environment = {
     apiKey: 'AIzaSyC255-5OmWCP0zeFiJloQbn439fixv_fXY',
     authDomain: 'gbuilder3-b9067.firebaseapp.com',
     messagingSenderId: '968118074890',
-  },};
+  },
+  production: false
+};
