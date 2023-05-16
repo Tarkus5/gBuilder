@@ -7,7 +7,7 @@
         <label class="guitarWoodLabel" for="PauFerro"><strong>Pau Ferro</strong></label>
         <br>
         <input class="form-check-input" type="checkbox" id="Pau Ferro" name="Pau Ferro"
-          [(ngModel)]="this.serviceWood.pauFerro" [(ngModel)]="this.checkbox8" [(ngModel)]="pauFerro"  (change)="onCheckboxChange()"
+        [(ngModel)]="pauFerro"  [(ngModel)]="this.serviceWood.pauFerro" [(ngModel)]="this.checkbox8"   (change)="onCheckboxChange()"
           [disabled]="disableCheckboxes && !this.checkbox8">
       </form>
     </div>

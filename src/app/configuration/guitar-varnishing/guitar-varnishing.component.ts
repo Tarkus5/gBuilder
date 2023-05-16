@@ -34,10 +34,11 @@ export class GuitarVarnishingComponent {
 
   textColore = false;
 
+
   colore: any;
   dataColore: any;
-  dataVarnishing : any;
-  
+  dataVerniciatura : any;
+
 
   public data: any = [];
   dataLocalStorage: any = [];
@@ -52,6 +53,31 @@ export class GuitarVarnishingComponent {
 
   ngOnInit() {
     if (this.router.url == '/guitar-configurator') {
+      this.dataVerniciatura = localStorage.getItem('Verniciatura');
+      this.dataColore = localStorage.getItem('Colore Verniciatura');
+      switch (this.dataVerniciatura) {
+        case 'Nitro': {
+          this.checkbox1 = true;
+          break;
+        }
+        case 'Poli': {
+          this.checkbox2 = true;
+          break;
+        }
+        case 'Relic': {
+          this.checkbox3 = true;
+          break;
+        }
+        case 'Swirl': {
+          this.checkbox4 = true;
+          break;
+        }
+        case 'Natural': {
+          this.checkbox5 = true;
+          break;
+        }
+      }
+      this.checkCheckbox()
       this.nextButton = true;
       this.natural = true;
     } else {
@@ -143,44 +169,58 @@ export class GuitarVarnishingComponent {
       } else {
         this.nextDisabled = true
       }
-      if (this.checkbox1 || this.checkbox2 || this.checkbox3 || this.checkbox4) {
-          this.disableCheckboxes = true;
-          this.textColore = true
-      } else {
-        this.disableCheckboxes = false;
-        this.textColore = false;
-        this.natural = true;
-      }
+      this.checkCheckbox();
     }
    if(this.router.url === '/guitar-configurator') {
     if (this.checkbox1) {
-      this.dataLocalStorage[0] = 'Nitro';
-      this.localStorage.setItem('Verniciatura', JSON.stringify(this.dataLocalStorage))
-    } else if (this.checkbox2) {
-      this.dataLocalStorage[0] = 'Poliuretanica';
-      this.localStorage.setItem('Verniciatura', JSON.stringify(this.dataLocalStorage));
-    } else if (this.checkbox3) {
-      this.dataLocalStorage[0] = 'Relic';
-      this.localStorage.setItem('Verniciatura', JSON.stringify(this.dataLocalStorage));
-    } else if (this.checkbox4) {
-      this.dataLocalStorage[0] = 'Swirl';
-      this.localStorage.setItem('Verniciatura', JSON.stringify(this.dataLocalStorage));
-    } else if (this.checkbox5) {
-      this.dataLocalStorage[0] = 'Natural';
+
+
+      this.dataLocalStorage = 'Nitro';
       this.localStorage.setItem('Verniciatura', this.dataLocalStorage);
+    } else if (this.checkbox2) {
+      this.dataLocalStorage = 'Poliuretanica';
+
+      this.localStorage.setItem('Verniciatura', this.dataLocalStorage);
+    } else if (this.checkbox3) {
+      this.dataLocalStorage = 'Relic';
+      this.localStorage.setItem('Verniciatura', this.dataLocalStorage);
+    } else if (this.checkbox4) {
+      this.dataLocalStorage = 'Swirl';
+      this.localStorage.setItem('Verniciatura', this.dataLocalStorage);
+    } else if (this.checkbox5) {
+      this.dataLocalStorage = 'Natural';
+      this.localStorage.setItem('Verniciatura', this.dataLocalStorage);
+      localStorage.setItem('Colore Verniciatura', 'Natural')
     }
     else {
       localStorage.removeItem('Verniciatura');
+      this.dataColore = localStorage.getItem('Colore Verniciatura')
+      console.log(this.dataColore);
+    if (  this.dataColore === 'Natural'){
+        localStorage.removeItem('Colore Verniciatura');
+      }
     }
    } else {
-
    }
   }
 
   onTextareaInput(colore: any): void {
     const value = (document.getElementById("TextColore") as any).value;
-    this.dataLocalStorage[1] = value;
-    const v = this.dataLocalStorage[0] + " , " + this.dataLocalStorage[1];
-    this.localStorage.setItem('Verniciatura', v);
+    this.dataLocalStorage = value;
+    this.localStorage.setItem('Colore Verniciatura', value);
+  }
+  checkCheckbox(){
+    if (this.checkbox1 || this.checkbox2 || this.checkbox3 || this.checkbox4||this.checkbox5) {
+      this.disableCheckboxes = true;
+      this.textColore = true
+      this.nextDisabled = false;
+
+  } else {
+    this.disableCheckboxes = false;
+    this.textColore = false;
+    this.natural = true;
+    this.nextDisabled = true;
+
+  }
   }
 }
