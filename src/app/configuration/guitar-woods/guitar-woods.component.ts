@@ -153,8 +153,6 @@ export class GuitarWoodsComponent {
       this.dataTop = localStorage.getItem('LegnoTop');
       this.dataManico = localStorage.getItem('LegnoManico');
       this.dataTastiera = localStorage.getItem('LegnoTastiera');
-      console.log(this.dataBody);
-
       switch (this.serviceWood.selectedTab) {
         case 3:
           switch (this.dataBody) {
