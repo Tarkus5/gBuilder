@@ -52,9 +52,8 @@ export class GuitarVarnishingComponent {
   cancel(): void { }
 
   ngOnInit() {
+    this.checkLocalStorageColore();
     if (this.router.url == '/guitar-configurator') {
-      this.dataVerniciatura = localStorage.getItem('Verniciatura');
-      this.dataColore = localStorage.getItem('Colore Verniciatura');
       switch (this.dataVerniciatura) {
         case 'Nitro': {
           this.checkbox1 = true;
@@ -78,7 +77,6 @@ export class GuitarVarnishingComponent {
         }
       }
       this.checkCheckbox()
-      this.checkLocalStorageColore();
       this.nextButton = true;
       this.natural = true;
     } else {
@@ -200,7 +198,7 @@ export class GuitarVarnishingComponent {
         localStorage.removeItem('Colore Verniciatura');
       }
     }
-    this.checkLocalStorageColore();
+
    } else {
    }
   }
@@ -236,8 +234,7 @@ export class GuitarVarnishingComponent {
       localStorage.setItem('Colore Verniciatura', '...');
       this.valueColore = '...';
     } else {
-      this.valueColore = this.dataColore;
-      this.dataColore = localStorage.getItem('Altro');
+      this.dataColore = localStorage.getItem('Colore Verniciatura');
       this.valueColore = this.dataColore;
       console.log('value' + this.valueColore);
 

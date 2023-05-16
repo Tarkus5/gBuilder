@@ -215,7 +215,7 @@ export class AltroFormComponent {
   }
   checkLocalStorageManopole() {
     if (localStorage.getItem('Manopole') === null) {
-      localStorage.setItem('Manopole', 'Stato Style');
+      localStorage.setItem('Manopole', 'Strato Style');
       this.dropdown8 = 'Strato Style';
     } else {
       this.dropdown8 = this.dataManopole;
