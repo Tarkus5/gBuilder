@@ -7,10 +7,10 @@
         <label class="guitarTypeLabel" for="Meccaniche"><strong>Meccaniche</strong></label>
         <br>
         <div class="Options">
-          <select id="Meccaniche" (change)="onSelectMeccanicheChange($event)">
-            <option value="Classiche">Classiche</option>
-            <option value="Autobloccanti">Autobloccanti</option>
-            <option value="Vintage">Vintage</option>
+          <select id="Meccaniche" [value]="dropdown1" (change)="onSelectMeccanicheChange($event)" >
+            <option value='Classiche'>Classiche</option>
+            <option value='Autobloccanti'>Autobloccanti</option>
+            <option value='Vintage'>Vintage</option>
           </select>
         </div>
       </form>
@@ -22,7 +22,7 @@
         <label class="guitarTypeLabel" for="PickUp"><strong>Configurazione PickUp</strong></label>
         <br>
         <div class="Options">
-          <select id="PickUp" (change)="onSelectPickUpChange($event)">
+          <select id="PickUp" (change)="onSelectPickUpChange($event)" [value]="dropdown2">
             <option value="SSS">SSS</option>
             <option value="HSS">HSS</option>
             <option value="HH">HH</option>
@@ -43,7 +43,7 @@
         <label class="guitarTypeLabel" for="Binding"><strong>Binding</strong></label>
         <br>
         <div class="Options">
-          <select id="Binding" (change)="onSelectBindingChange($event)">
+          <select id="Binding" (change)="onSelectBindingChange($event)"[value]="dropdown3">
             <option value="No">No</option>
             <option value="Si">Si</option>
           </select>
@@ -57,7 +57,7 @@
         <label class="guitarTypeLabel" for="Battipenna"><strong>Battipenna</strong></label>
         <br>
         <div class="Options">
-          <select id="Battipenna" (change)="onSelectBattipennaChange($event)">
+          <select id="Battipenna" (change)="onSelectBattipennaChange($event)"[value]="dropdown4">
             <option value="Si">Si</option>
             <option value="No">No</option>
           </select>
@@ -71,7 +71,7 @@
         <label class="guitarTypeLabel" for="Natural"><strong>Ponte</strong></label>
         <br>
         <div class="Options">
-          <select id="Ponte" (change)="onSelectPonteChange($event)">
+          <select id="Ponte" (change)="onSelectPonteChange($event)"[value]="dropdown5">
             <option value="Fisso">Fisso</option>
             <option value="Mobile">Mobile</option>
             <option value="Floyd Rose">Floyd Rose</option>
@@ -88,7 +88,7 @@
         <label class="guitarTypeLabel" for="Natural"><strong>Capotasto</strong></label>
         <br>
         <div class="Options">
-          <select id="Capotasto" (change)="onSelectCapotastoChange($event)">
+          <select id="Capotasto" (change)="onSelectCapotastoChange($event)" [value]="dropdown6">
             <option value="Plastica">Plastica</option>
             <option value="Grafene">Grafene</option>
             <option value="Osso">Osso</option>
@@ -104,7 +104,7 @@
         <label class="guitarTypeLabel" for="Straps"><strong>Straps</strong></label>
         <br>
         <div class="Options">
-          <select id="Straps" (change)="onSelectStrapsChange($event)">
+          <select id="Straps" (change)="onSelectStrapsChange($event)" [value]="dropdown7">
             <option value="Standard">Standard</option>
             <option value="StrapLock">StrapLock</option>
           </select>
@@ -118,7 +118,7 @@
         <label class="guitarTypeLabel" for="Manopole"><strong>Manopole</strong></label>
         <br>
         <div class="Options">
-          <select id="Manopole" (change)="onSelectManopoleChange($event)">
+          <select id="Manopole" (change)="onSelectManopoleChange($event)" [value]="dropdown8">
             <option value="Strato Style">Strato Style</option>
             <option value="Gibson Style">Gibson Style</option>
             <option value="Steel Style">Steel Style</option>
@@ -135,7 +135,7 @@
         <label class="guitarTypeLabel" for="Paletta"><strong>Paletta in tinta</strong></label>
         <br>
         <div class="Options">
-          <select id="Paletta" (change)="onSelectPalettaChange($event)">
+          <select id="Paletta" (change)="onSelectPalettaChange($event)" [value]="dropdown9">
             <option value="No">No</option>
             <option value="Si">Si</option>
           </select>
@@ -149,7 +149,7 @@
         <label class="guitarTypeLabel" for="Orientamento"><strong>Orientamento</strong></label>
         <br>
         <div class="Options">
-          <select id="Orientamento" (change)="onSelectOrientamentoChange($event)">
+          <select id="Orientamento" (change)="onSelectOrientamentoChange($event)" [value]="dropdown10">
             <option value="Classica">Classica</option>
             <option value="Mancina">Mancina</option>
           </select>
@@ -169,7 +169,7 @@
         <form action="">
           <div class="alert alert-dark mt-5" role="alert">
             <textarea id="TextAltro" style="height: 55px; width: 500px; " placeholder="..." name="TextAltro"
-              (input)="onTextareaInput($event)"></textarea>
+              (input)="onTextareaInput($event)" [value]="dropdown11"></textarea>
           </div>
         </form>
       </div>

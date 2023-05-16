@@ -34,7 +34,7 @@ export class GuitarVarnishingComponent {
 
   textColore = false;
 
-
+  valueColore: string = '';
   colore: any;
   dataColore: any;
   dataVerniciatura : any;
@@ -78,6 +78,7 @@ export class GuitarVarnishingComponent {
         }
       }
       this.checkCheckbox()
+      this.checkLocalStorageColore();
       this.nextButton = true;
       this.natural = true;
     } else {
@@ -170,11 +171,11 @@ export class GuitarVarnishingComponent {
         this.nextDisabled = true
       }
       this.checkCheckbox();
+
     }
    if(this.router.url === '/guitar-configurator') {
+
     if (this.checkbox1) {
-
-
       this.dataLocalStorage = 'Nitro';
       this.localStorage.setItem('Verniciatura', this.dataLocalStorage);
     } else if (this.checkbox2) {
@@ -195,11 +196,11 @@ export class GuitarVarnishingComponent {
     else {
       localStorage.removeItem('Verniciatura');
       this.dataColore = localStorage.getItem('Colore Verniciatura')
-      console.log(this.dataColore);
     if (  this.dataColore === 'Natural'){
         localStorage.removeItem('Colore Verniciatura');
       }
     }
+    this.checkLocalStorageColore();
    } else {
    }
   }
@@ -211,9 +212,16 @@ export class GuitarVarnishingComponent {
   }
   checkCheckbox(){
     if (this.checkbox1 || this.checkbox2 || this.checkbox3 || this.checkbox4||this.checkbox5) {
+      if(!this.checkbox5){
       this.disableCheckboxes = true;
-      this.textColore = true
+      this.textColore = true;
       this.nextDisabled = false;
+      } else{
+        this.disableCheckboxes = true;
+        this.textColore = false;
+        this.nextDisabled = false;
+
+      }
 
   } else {
     this.disableCheckboxes = false;
@@ -222,5 +230,17 @@ export class GuitarVarnishingComponent {
     this.nextDisabled = true;
 
   }
+  }
+  checkLocalStorageColore() {
+    if (localStorage.getItem('Colore Verniciatura') === null) {
+      localStorage.setItem('Colore Verniciatura', '...');
+      this.valueColore = '...';
+    } else {
+      this.valueColore = this.dataColore;
+      this.dataColore = localStorage.getItem('Altro');
+      this.valueColore = this.dataColore;
+      console.log('value' + this.valueColore);
+
+    }
   }
 }
