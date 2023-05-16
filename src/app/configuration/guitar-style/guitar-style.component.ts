@@ -36,6 +36,7 @@ export class GuitarStyleComponent implements OnInit, OnChanges {
   checkbox6 = false;
   checkbox7 = false;
   checkbox8 = false;
+  dataBody : any;
 
   dataLocalStorage: any;
   checkboxValue: any;
@@ -50,6 +51,36 @@ export class GuitarStyleComponent implements OnInit, OnChanges {
   cancel(): void { }
 
   ngOnInit() {
+    if (this.router.url === '/guitar-configurator') {
+    this.dataBody = localStorage.getItem('Body');
+    switch (this.dataBody){
+      case 'Stratocaster':
+                    this.checkbox1 = true;
+                    break;
+                  case 'Telecaster':
+                    this.checkbox2 = true;
+                    break;
+                  case 'LesPaul':
+                    this.checkbox3 = true;
+                    break;
+                  case 'SG':
+                    this.checkbox4 = true;
+                    break;
+                  case 'Hollowbody':
+                    this.checkbox5 = true;
+                    break;
+                  case 'Flying V':
+                    this.checkbox6 = true;
+                    break;
+                  case 'Explorer':
+                    this.checkbox7 = true;
+                    break;
+                  case 'Special':
+                    this.checkbox8 = true;
+                    break;
+    }
+    this.checkedCheckBox()
+  }
     const user = localStorage.getItem('user');
     const userMail = localStorage.getItem('userEmail')?.replaceAll('"', '');
     if (user !== null || undefined || '') {
@@ -154,11 +185,8 @@ export class GuitarStyleComponent implements OnInit, OnChanges {
         this.nextDisabled = true
         this.localstorage.removeItem;
       }
-      if (this.checkbox1 || this.checkbox2 || this.checkbox3 || this.checkbox4 || this.checkbox5 || this.checkbox6 || this.checkbox7 || this.checkbox8) {
-        this.disableCheckboxes = true;
-      } else {
-        this.disableCheckboxes = false;
-      }
+      //qui
+      this.checkedCheckBox();
     }
     if(this.router.url === '/guitar-configurator') {
       if (this.Strato) {
@@ -190,11 +218,20 @@ export class GuitarStyleComponent implements OnInit, OnChanges {
         localStorage.removeItem('Body');
       }
     } else{
-      
+
     }
   }
 
   onChoiceSelected(data: any): void {
     this.localstorage.saveData("Scelta del body", this.dataLocalStorage);
+  }
+  checkedCheckBox(){
+    if (this.checkbox1 || this.checkbox2 || this.checkbox3 || this.checkbox4 || this.checkbox5 || this.checkbox6 || this.checkbox7 || this.checkbox8) {
+        this.disableCheckboxes = true;
+        this.nextDisabled = false;
+      } else {
+        this.disableCheckboxes = false;
+        this.nextDisabled = true;
+      }
   }
 }

@@ -8,7 +8,7 @@ export class LocalStorageService {
   data:String[] = [];
 
    setItem(key: string, value: any): void {
-    localStorage.setItem(key, JSON.stringify(value));
+    localStorage.setItem(key, value);
   }
 
   getItem(key: string): any {
@@ -17,7 +17,7 @@ export class LocalStorageService {
   removeItem(data: String): void {
     localStorage.clear();
   }
-  
+
   saveData(arg0: string, choice: any) {
   }
 }
