@@ -7,8 +7,8 @@
         <label class="guitarWoodLabel" for="PauFerro"><strong>Pau Ferro</strong></label>
         <br>
         <input class="form-check-input" type="checkbox" id="Pau Ferro" name="Pau Ferro"
-          [(ngModel)]="this.serviceWood.pauFerro" [(ngModel)]="pauFerro" [(ngModel)]="this.checkbox8" (change)="onCheckboxChange()"
-          [disabled]="disableCheckboxes && !checkbox8">
+          [(ngModel)]="this.serviceWood.pauFerro" [(ngModel)]="this.checkbox8" [(ngModel)]="pauFerro"  (change)="onCheckboxChange()"
+          [disabled]="disableCheckboxes && !this.checkbox8">
       </form>
     </div>
     <div class="col" *ngIf="this.serviceWood.visiblePalissandro">
@@ -18,8 +18,8 @@
         <br>
         <label class="guitarWoodLabel" for="Palissandro"><strong>Palissandro</strong></label>
         <br>
-        <input class="form-check-input" type="checkbox" id="Palissandro" name="Palissando"
-          [(ngModel)]="this.serviceWood.palissandro" [(ngModel)]="this.checkbox13" [(ngModel)]="palissandro" (change)="onCheckboxChange()"
+        <input class="form-check-input" type="checkbox" id="Palissandro" name="Palissandro"
+          [(ngModel)]="palissandro" [(ngModel)]="this.serviceWood.palissandro" [(ngModel)]="this.checkbox13"   (change)="onCheckboxChange()"
           [disabled]="disableCheckboxes && !this.checkbox13">
       </form>
     </div>
@@ -29,7 +29,8 @@
         <br>
         <label class="guitarWoodLabel" for="Ebano"><strong>Ebano</strong></label>
         <br>
-        <input class="form-check-input" type="checkbox" id="Ebano" name="Ebano" [(ngModel)]="ebano" [(ngModel)]="this.serviceWood.ebano"
+        <input class="form-check-input" type="checkbox" id="Ebano" name="Ebano"
+         [(ngModel)]="ebano" [(ngModel)]="this.serviceWood.ebano"
           [(ngModel)]="this.checkbox14" (change)="onCheckboxChange()"
           [disabled]="disableCheckboxes && !this.checkbox14">
       </form>

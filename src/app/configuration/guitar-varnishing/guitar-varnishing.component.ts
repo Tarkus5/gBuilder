@@ -36,6 +36,8 @@ export class GuitarVarnishingComponent {
 
   colore: any;
   dataColore: any;
+  dataVarnishing : any;
+  
 
   public data: any = [];
   dataLocalStorage: any = [];
@@ -171,7 +173,7 @@ export class GuitarVarnishingComponent {
       localStorage.removeItem('Verniciatura');
     }
    } else {
-    
+
    }
   }
 
