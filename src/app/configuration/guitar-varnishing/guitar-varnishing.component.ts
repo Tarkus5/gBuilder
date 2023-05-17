@@ -215,12 +215,17 @@ export class GuitarVarnishingComponent {
       if(!this.checkbox5){
       this.disableCheckboxes = true;
       this.textColore = true;
+      this.checkLocalStorageColore();
+      if (this.dataColore === 'Natural'){
+        localStorage.setItem('Colore Verniciatura', '');
+      }
       this.nextDisabled = false;
       } else{
         this.disableCheckboxes = true;
         this.textColore = false;
         this.nextDisabled = false;
-
+        this.dataColore = localStorage.getItem('Colore Verniciatura');
+        this.valueColore = this.dataColore;
       }
 
   } else {
@@ -233,8 +238,8 @@ export class GuitarVarnishingComponent {
   }
   checkLocalStorageColore() {
     if (localStorage.getItem('Colore Verniciatura') === null) {
-      localStorage.setItem('Colore Verniciatura', '...');
-      this.valueColore = '...';
+      localStorage.setItem('Colore Verniciatura', '');
+      this.valueColore = '';
     } else {
       this.dataColore = localStorage.getItem('Colore Verniciatura');
       this.valueColore = this.dataColore;

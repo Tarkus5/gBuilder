@@ -45,9 +45,9 @@
         <input class="form-check-input" type="checkbox" id="Natural" name="Natural" [(ngModel)]="natural" [(ngModel)]="checkbox5" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox5">
       </form>
     </div>
-    <div class="alert alert-dark" role="alert" *ngIf="textColore">
+    <div class="alert alert-dark" role="alert" *ngIf="textColore" >
       <h3>Inserisci il colore</h3>
-      <textarea id="TextColore" name="TextColore" [value]="valueColore" (input)="onTextareaInput($event)"></textarea>
+      <textarea id="TextColore" name="TextColore" [value]="valueColore" (input)="onTextareaInput($event)" placeholder="Scrivi qui il colore"></textarea>
     </div>
   </div>
   <div class="row rowButtons justify-content-center">
