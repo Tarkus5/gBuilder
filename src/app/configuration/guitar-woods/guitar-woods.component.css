@@ -4,10 +4,9 @@
   background-color: white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding-top: 75px;
-  padding-bottom: 50px;
-  padding-left: 35px;
-  padding-right: 35px;
+  border-top-right-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 25px;
 }
 
 button {
@@ -54,18 +53,14 @@ label {
   margin-top: 10px;
 }
 
+img {
+  border-radius: 10px;
+}
+
+.col {
+  padding-top: 2%;
+}
+
 .rowButtons {
-  margin-top: 40px;
-}
-
-.rowWoods {
-  margin-top: 20px;
-}
-
-img {
-  border-radius: 10px;
-}
-
-img {
-  border-radius: 10px;
+  padding-top: 3%;
 }
