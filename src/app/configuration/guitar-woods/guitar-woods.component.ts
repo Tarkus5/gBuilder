@@ -114,7 +114,7 @@ export class GuitarWoodsComponent {
                   case 'Okume':
                     this.okume = true;
                     break;
-                  case 'Pau Ferro':
+                  case 'PauFerro':
                     this.pauFerro = true;
                     break;
                   case 'Mogano':
@@ -177,7 +177,7 @@ export class GuitarWoodsComponent {
             case 'Okume':
               this.checkbox7 = true;
               break;
-            case 'Pau Ferro':
+            case 'PauFerro':
               this.checkbox8 = true;
               break;
             case 'Mogano':
@@ -230,7 +230,7 @@ export class GuitarWoodsComponent {
             case 'Okume':
               this.checkbox7 = true;
               break;
-            case 'Pau Ferro':
+            case 'PauFerro':
               this.checkbox8 = true;
               break;
             case 'Mogano':
@@ -286,7 +286,7 @@ export class GuitarWoodsComponent {
             case 'Okume':
               this.checkbox7 = true;
               break;
-            case 'Pau Ferro':
+            case 'PauFerro':
               this.checkbox8 = true;
               break;
             case 'Mogano':
@@ -340,7 +340,7 @@ export class GuitarWoodsComponent {
             case 'Okume':
               this.checkbox7 = true;
               break;
-            case 'Pau Ferro':
+            case 'PauFerro':
               this.checkbox8 = true;
               break;
             case 'Mogano':
@@ -455,7 +455,7 @@ export class GuitarWoodsComponent {
             this.data = 'Okume';
             this.localStorage.setItem('LegnoBody', this.data);
           } else if (this.checkbox8) {
-            this.data = 'Pau Ferro';
+            this.data = 'PauFerro';
             this.localStorage.setItem('LegnoBody', this.data);
           } else if (this.checkbox9) {
             this.data = 'Mogano';
@@ -509,7 +509,7 @@ export class GuitarWoodsComponent {
             this.data = 'Okume';
             this.localStorage.setItem('LegnoTop', this.data);
           } else if (this.checkbox8) {
-            this.data = 'Pau Ferro';
+            this.data = 'PauFerro';
             this.localStorage.setItem('LegnoTop', this.data);
           } else if (this.checkbox9) {
             this.data = 'Mogano';
@@ -566,7 +566,7 @@ export class GuitarWoodsComponent {
             this.data = 'Okume';
             this.localStorage.setItem('LegnoManico', this.data);
           } else if (this.checkbox8) {
-            this.data = 'Pau Ferro';
+            this.data = 'PauFerro';
             this.localStorage.setItem('LegnoManico', this.data);
           } else if (this.checkbox9) {
             this.data = 'Mogano';
@@ -620,7 +620,7 @@ export class GuitarWoodsComponent {
             this.data = 'Okume';
             this.localStorage.setItem('LegnoTastiera', this.data);
           } else if (this.checkbox8) {
-            this.data = 'Pau Ferro';
+            this.data = 'PauFerro';
             this.localStorage.setItem('LegnoTastiera', this.data);
           } else if (this.checkbox9) {
             this.data = 'Mogano';

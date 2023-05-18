@@ -237,8 +237,8 @@ export class AltroFormComponent {
   }
   checkLocalStorageAltro() {
     if (localStorage.getItem('Altro') === null) {
-      localStorage.setItem('Altro', '...');
-      this.dropdown11 = '...';
+      localStorage.setItem('Altro', '');
+      this.dropdown11 = '';
     } else {
       this.dropdown11 = this.dataAltro;
       this.dataAltro = localStorage.getItem('Altro');
