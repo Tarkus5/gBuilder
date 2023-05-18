@@ -27,6 +27,7 @@ export class FinalizeComponent implements OnInit {
   altro: any;
   popUp: Boolean = false;
   datiUtente: any;
+  coloreVerniciatura: any;
   closeResult = '';
 
   constructor(
@@ -64,6 +65,7 @@ export class FinalizeComponent implements OnInit {
     this.straps = this.removeVirgolette(this.straps);
     this.verniciatura = localStorage.getItem('Verniciatura');
     this.verniciatura = this.removeVirgolette(this.verniciatura);
+    this.coloreVerniciatura = localStorage.getItem('Colore Verniciatura');
     this.orientamento = localStorage.getItem('Orientamento');
     this.orientamento = this.removeVirgolette(this.orientamento);
     this.binding = localStorage.getItem('Binding');
@@ -101,6 +103,7 @@ export class FinalizeComponent implements OnInit {
     this.manopole = localStorage.setItem('Manopole', this.manopole);
     this.straps = localStorage.setItem('Straps', this.straps);
     this.verniciatura = localStorage.setItem('Verniciatura', this.verniciatura);
+    this.coloreVerniciatura = localStorage.setItem('Colore Verniciatura', this.coloreVerniciatura);
     this.orientamento = localStorage.setItem('Orientamento', this.orientamento);
     this.binding = localStorage.setItem('Binding', this.binding);
     this.meccaniche = localStorage.setItem('Meccaniche', this.meccaniche);

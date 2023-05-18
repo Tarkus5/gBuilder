@@ -117,6 +117,9 @@ export class GuitarVarnishingComponent {
                   case 'Relic':
                     this.relic = true;
                     break;
+                  case 'Swirl':
+                    this.swirl = true;
+                    break;
                 }
               }
             }
