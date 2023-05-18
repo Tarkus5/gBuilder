@@ -1,34 +1,33 @@
-<div class="container container-esterno position-absolute top-50 start-50 translate-middle" id="container">
+<div class="container-fluid">
   <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-8">
-      <h2>Scarica il progetto</h2>
-      <form #f="ngForm">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Nome" name="nomeUtente" ngModel required
-                #nome="ngModel">
-              <span class="help-block" *ngIf="!nome.valid && mail.touched">Questo campo non può
-                rimanere
-                vuoto</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <input type="email" class="form-control" placeholder="Mail" name="mail" ngModel required email
-                #mail="ngModel">
-              <span class="help-block" *ngIf="!mail.valid && mail.touched">Inserisci una mail valida</span>
-            </div>
-          </div>
+    <h2>Scarica il progetto</h2>
+    <form #f="ngForm">
+      <div class="row justify-content-md-center">
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="Nome" name="nomeUtente" ngModel required #nome="ngModel">
+          <span class="help-block" *ngIf="!nome.valid && mail.touched">Questo campo non può
+            rimanere
+            vuoto</span>
         </div>
-      </form>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-8">
+          <input type="email" class="form-control" placeholder="Mail" name="mail" ngModel required email
+            #mail="ngModel">
+          <span class="help-block" *ngIf="!mail.valid && mail.touched">Inserisci una mail valida</span>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="d-flex justify-content-center">
+      <button (click)="saveUser(f)" class="btn" type="submit" [disabled]="!f.valid">Salva e invia</button>
     </div>
-  </div>
-  <div>
-    <button (click)="saveUser(f)" class="btn" id="save" type="submit" [disabled]="!f.valid">Salva e invia</button>
-    <button (click)="return()" class="btn" id="back" type="submit">Annulla </button>
-  </div>
-  <div style="text-align: center;">
-    <img src="./../../assets/Others/Nuova cartella/Immagine.png" alt="chitarre" width="650">
+    <div class="d-flex justify-content-center">
+      <button (click)="return()" class="btn buttonBottom" type="submit">Annulla </button>
+    </div>
+    <div class="d-flex justify-content-center">
+      <img src="../../../assets/Others/Nuova cartella/Guitars.png" alt="chitarre" width="650" class="img-fluid">
+    </div>
   </div>
 </div>
