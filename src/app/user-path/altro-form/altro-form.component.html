@@ -1,13 +1,14 @@
-<div class="container container-form text-center ">
-  <div class="row">
+<div class="container text-center">
+  <div class="row row-cols-auto justify-content-md-center">
     <div class="col">
       <form action="">
-        <img class="woodImage" src="./../../assets/Others/Nuova cartella/meccaniche.jpg" alt="Meccaniche" width="175">
+        <img src="../../../assets/Others/Nuova cartella/Meccaniche_New.png" alt="Meccaniche" width="100" height="100"
+          class="img-fluid">
         <br>
-        <label class="guitarTypeLabel" for="Meccaniche"><strong>Meccaniche</strong></label>
+        <label for="Meccaniche"><strong>Meccaniche</strong></label>
         <br>
         <div class="Options">
-          <select id="Meccaniche" [value]="dropdown1" (change)="onSelectMeccanicheChange($event)" >
+          <select id="Meccaniche" [value]="dropdown1" (change)="onSelectMeccanicheChange($event)">
             <option value='Classiche'>Classiche</option>
             <option value='Autobloccanti'>Autobloccanti</option>
             <option value='Vintage'>Vintage</option>
@@ -17,9 +18,10 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="woodImage" src="./../../assets/Others/Nuova cartella/pickUp.jpg" alt="PickUp" width="175">
+        <img src="../../../assets/Others/Nuova cartella/Pickup_New.png" alt="PickUp" width="100" height="100"
+          class="img-fluid">
         <br>
-        <label class="guitarTypeLabel" for="PickUp"><strong>Configurazione PickUp</strong></label>
+        <label for="PickUp"><strong>Configurazione PickUp</strong></label>
         <br>
         <div class="Options">
           <select id="PickUp" (change)="onSelectPickUpChange($event)" [value]="dropdown2">
@@ -38,12 +40,13 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="woodImage" src="./../../assets/Others/Nuova cartella/binding.jpg" alt="Binding" width="175">
+        <img src="../../../assets/Others/Nuova cartella/Binding_New.png" alt="Binding" width="100" height="100"
+          class="img-fluid">
         <br>
-        <label class="guitarTypeLabel" for="Binding"><strong>Binding</strong></label>
+        <label for="Binding"><strong>Binding</strong></label>
         <br>
         <div class="Options">
-          <select id="Binding" (change)="onSelectBindingChange($event)"[value]="dropdown3">
+          <select id="Binding" (change)="onSelectBindingChange($event)" [value]="dropdown3">
             <option value="No">No</option>
             <option value="Si">Si</option>
           </select>
@@ -52,12 +55,13 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="woodImage" src="./../../assets/Others/Nuova cartella/battipenna.png" alt="Battipenna" width="175">
+        <img src="../../../assets/Others/Nuova cartella/Battipenna_New.png" alt="Battipenna" width="100" height="100"
+          class="img-fluid">
         <br>
-        <label class="guitarTypeLabel" for="Battipenna"><strong>Battipenna</strong></label>
+        <label for="Battipenna"><strong>Battipenna</strong></label>
         <br>
         <div class="Options">
-          <select id="Battipenna" (change)="onSelectBattipennaChange($event)"[value]="dropdown4">
+          <select id="Battipenna" (change)="onSelectBattipennaChange($event)" [value]="dropdown4">
             <option value="Si">Si</option>
             <option value="No">No</option>
           </select>
@@ -66,12 +70,13 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="woodImage" src="./../../assets/Others/Nuova cartella/ponte!.jpg" alt="Ponte" width="175">
+        <img src="../../../assets/Others/Nuova cartella/Ponte_New.png" alt="Ponte" width="100" height="100"
+          class="img-fluid">
         <br>
-        <label class="guitarTypeLabel" for="Natural"><strong>Ponte</strong></label>
+        <label for="Natural"><strong>Ponte</strong></label>
         <br>
         <div class="Options">
-          <select id="Ponte" (change)="onSelectPonteChange($event)"[value]="dropdown5">
+          <select id="Ponte" (change)="onSelectPonteChange($event)" [value]="dropdown5">
             <option value="Fisso">Fisso</option>
             <option value="Mobile">Mobile</option>
             <option value="Floyd Rose">Floyd Rose</option>
@@ -79,13 +84,13 @@
         </div>
       </form>
     </div>
-  </div>
-  <div class="row">
+
     <div class="col">
       <form action="">
-        <img class="woodImage" src="./../../assets/Others/Nuova cartella/capotasto.jpeg" alt="Capotasto" width="175">
+        <img src="../../../assets/Others/Nuova cartella/Capotasto_New.png" alt="Capotasto" width="100" height="100"
+          class="img-fluid">
         <br>
-        <label class="guitarTypeLabel" for="Natural"><strong>Capotasto</strong></label>
+        <label for="Natural"><strong>Capotasto</strong></label>
         <br>
         <div class="Options">
           <select id="Capotasto" (change)="onSelectCapotastoChange($event)" [value]="dropdown6">
@@ -99,9 +104,10 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="woodImage" src="./../../assets/Others/Nuova cartella/straps.jpg" alt="Straps" width="175">
+        <img src="../../../assets/Others/Nuova cartella/Straps_New.png" alt="Straps" width="100" height="100"
+          class="img-fluid">
         <br>
-        <label class="guitarTypeLabel" for="Straps"><strong>Straps</strong></label>
+        <label for="Straps"><strong>Straps</strong></label>
         <br>
         <div class="Options">
           <select id="Straps" (change)="onSelectStrapsChange($event)" [value]="dropdown7">
@@ -113,9 +119,10 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="woodImage" src="./../../assets/Others/Nuova cartella/manopole.jpg" alt="Manopole" width="175">
+        <img src="../../../assets/Others/Nuova cartella/Manopole_New.png" alt="Manopole" width="100" height="100"
+          class="img-fluid">
         <br>
-        <label class="guitarTypeLabel" for="Manopole"><strong>Manopole</strong></label>
+        <label for="Manopole"><strong>Manopole</strong></label>
         <br>
         <div class="Options">
           <select id="Manopole" (change)="onSelectManopoleChange($event)" [value]="dropdown8">
@@ -130,9 +137,10 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="woodImage" src="./../../assets/Others/Nuova cartella/paletta.jpg" alt="Paletta" width="175">
+        <img src="../../../assets/Others/Nuova cartella/Paletta_New.png" alt="Paletta" width="100" height="100"
+          class="img-fluid">
         <br>
-        <label class="guitarTypeLabel" for="Paletta"><strong>Paletta in tinta</strong></label>
+        <label for="Paletta"><strong>Paletta in tinta</strong></label>
         <br>
         <div class="Options">
           <select id="Paletta" (change)="onSelectPalettaChange($event)" [value]="dropdown9">
@@ -144,9 +152,10 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="woodImage" src="./../../assets/Others/Nuova cartella/mancina.jpg" alt="Orientamento" width="175">
+        <img src="../../../assets/Others/Nuova cartella/Mancina_New.png" alt="Orientamento" width="100" height="100"
+          class="img-fluid">
         <br>
-        <label class="guitarTypeLabel" for="Orientamento"><strong>Orientamento</strong></label>
+        <label for="Orientamento"><strong>Orientamento</strong></label>
         <br>
         <div class="Options">
           <select id="Orientamento" (change)="onSelectOrientamentoChange($event)" [value]="dropdown10">
@@ -156,10 +165,18 @@
         </div>
       </form>
     </div>
-    <div id="altroContainer" class="d-flex align-items-center justify-content-center">
+  </div>
+  <div class="row rowButtons justify-content-md-center">
+    <div class="col">
+      <button class="btn btn-back" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
+      <button class="btn" type="submit" (click)="emitEventFinalize()"
+        [disabled]="this.finalizeDisable">Finalizza</button>
+    </div>
+  </div>
+  <!-- <div id="altroContainer" class="d-flex align-items-center justify-content-center">
       <div>
-        <img id="altroImg" class="woodImage" src="./../../assets/Others/Nuova cartella/altro.jpg" alt="Altro"
-          width="100">
+        <img id="altroImg"  src="./../../assets/Others/Nuova cartella/altro.jpg" alt="Altro"
+          width="100" class="img-fluid">
       </div>
       <div>
         <label id="altro" class="guitarTypeLabel mb-5 ms-3" for="Altro"><strong>Aumenta il livello di personalizzazione,
@@ -173,12 +190,4 @@
           </div>
         </form>
       </div>
-    </div>
-    <div class="row rowButtons justify-content-center ">
-      <div class="col-auto">
-        <button class="btn btn-back" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
-        <button class="btn" type="submit" (click)="emitEventFinalize()"
-          [disabled]="this.finalizeDisable">Finalizza</button>
-      </div>
-    </div>
-  </div>
+    </div> -->
