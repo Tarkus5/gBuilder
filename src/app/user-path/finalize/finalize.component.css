@@ -4,48 +4,35 @@
   box-sizing: border-box;
 }
 
-.container {
+.container-fluid {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22);
-  position: relative;
-  overflow: hidden;
-  width: 1280px;
-  max-width: 100%;
-  min-height: 480px;
-  margin-top: 60px;
-  padding-top: 25px;
+	width: 1000px;
+  padding-top: 1.5%;
+  padding-bottom: 1%;
 }
 
-.table {
-  margin-top: 20px;
+.titleRow {
+  border-bottom: 3px solid  rgba(64, 61, 57, 0.2);;
+  margin-bottom: 2%;
 }
 
-th {
-  padding-top: 15px;
-}
-
-.rigaModificabile {
-  margin-top: 15px;
-  margin-bottom: 15px;
+h2 {
+  padding-bottom: 1%;
+  font-style: italic;
 }
 
 .colonnaColorata {
-  padding-top: 15px;
+  padding-top: 1%;
   background-color: rgba(64, 61, 57, 0.2);
 }
 
-.rigaFinale {
-  margin-bottom: 50px;
+.spacingRow {
+  padding-top: 1%;
 }
 
 button {
   margin: 15px;
-}
-
-h2 {
-  margin-top: 13px;
 }
 
 button {
@@ -79,44 +66,3 @@ button.ghost {
   border-color: #FFFFFF;
 }
 
-#titolo {
-  color: white;
-  position: relative;
-  text-align: center;
-  padding-top: 25px;
-  padding-bottom: 50px;
-}
-
-p {
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-form {
-  background-color: #FFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 50px;
-  height: 100%;
-  text-align: center;
-}
-
-input {
-  background-color: #eee;
-  border: none;
-  padding: 12px 15px;
-  margin: 8px 0;
-  width: 100%;
-}
-
-input.ng-invalid.ng-touched {
-  border: 1px solid red;
-}
-
-.help-block {
-  color: red;
-  font-size: 14px;
-}

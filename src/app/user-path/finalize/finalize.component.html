@@ -1,89 +1,83 @@
-<div id="titolo">
-  <h2>Ci siamo quasi!</h2>
-</div>
-<div>
-  <div class="container text-center position-absolute top-50 start-50 translate-middle">
-    <div class="row">
-      <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
-      </div>
-    </div>
-    <div class="row rigaIniziale">
-      <div class="col">
-        <h4>Stile Chitarra</h4>
-        <p>{{body}}</p>
-      </div>
-      <div class="col">
-        <h4>Legno Body</h4>
-        <p>{{legnoBody}}</p>
-      </div>
-      <div class="col">
-        <h4>Legno Top</h4>
-        <p>{{legnoTop}}</p>
-      </div>
-      <div class="col">
-        <h4>Legno Manico</h4>
-        <p>{{legnoManico}}</p>
-      </div>
-    </div>
-    <div class="row rigaModificabile colonnaColorata">
-      <div class="col">
-        <h4>Legno Tastiera</h4>
-        <p>{{legnoTastiera}}</p>
-      </div>
-      <div class="col">
-        <h4>Verniciatura</h4>
-        <p>{{verniciatura}}, {{coloreVerniciatura}}</p>
-      </div>
-      <div class="col">
-        <h4>Meccaniche</h4>
-        <p>{{meccaniche}}</p>
-      </div>
-      <div class="col">
-        <h4>Configurazione Pick Up</h4>
-        <p>{{pickUp}}</p>
-      </div>
-    </div>
-    <div class="row align-items-center">
-      <div class="col">
-        <h4>Binding</h4>
-        <p>{{binding}}</p>
-      </div>
-      <div class="col">
-        <h4>Battipenna</h4>
-        <p>{{battipenna}}</p>
-      </div>
-      <div class="col">
-        <h4>Ponte</h4>
-        <p>{{ponte}}</p>
-      </div>
-      <div class="col">
-        <h4>Capotasto</h4>
-        <p>{{capotasto}}</p>
-      </div>
-    </div>
-    <div class="row rigaModificabile colonnaColorata rigaFinale">
-      <div class="col">
-        <h4>Straps</h4>
-        <p>{{straps}}</p>
-      </div>
-      <div class="col">
-        <h4>Manopole</h4>
-        <p>{{manopole}}</p>
-      </div>
-      <div class="col">
-        <h4>Paletta in Tinta</h4>
-        <p>{{palettaInTinta}}</p>
-      </div>
-      <div class="col">
-        <h4>Orientamento</h4>
-        <p>{{orientamento}}</p>
-      </div>
-    </div>
-    <div class="col">
-      <h4>Altro</h4>
-      <p>{{altro}}</p>
-    </div>
-    <button class="btn" type="submit" (click)="return()">Torna al Configuratore</button>
-    <button class="btn" type="submit" (click)="next()">Concludi e salva il progetto</button>
+<div class="container-fluid text-center">
+  <div class="row titleRow justify-content-md-center">
+    <h2>Ci siamo quasi!</h2>
   </div>
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+      <h4>Stile Chitarra</h4>
+      <p>{{body}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Legno Body</h4>
+      <p>{{legnoBody}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Legno Top</h4>
+      <p>{{legnoTop}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Legno Manico</h4>
+      <p>{{legnoManico}}</p>
+    </div>
+  </div>
+  <div class="row colonnaColorata justify-content-md-center">
+    <div class="col-md-auto">
+      <h4>Legno Tastiera</h4>
+      <p>{{legnoTastiera}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Verniciatura</h4>
+      <p>{{verniciatura}}, {{coloreVerniciatura}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Meccaniche</h4>
+      <p>{{meccaniche}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Configurazione Pick Up</h4>
+      <p>{{pickUp}}</p>
+    </div>
+  </div>
+  <div class="row spacingRow justify-content-md-center">
+    <div class="col-md-auto">
+      <h4>Binding</h4>
+      <p>{{binding}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Battipenna</h4>
+      <p>{{battipenna}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Ponte</h4>
+      <p>{{ponte}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Capotasto</h4>
+      <p>{{capotasto}}</p>
+    </div>
+  </div>
+  <div class="row colonnaColorata justify-content-md-center">
+    <div class=" col-md-auto">
+      <h4>Straps</h4>
+      <p>{{straps}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Manopole</h4>
+      <p>{{manopole}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Paletta in Tinta</h4>
+      <p>{{palettaInTinta}}</p>
+    </div>
+    <div class="col-md-auto">
+      <h4>Orientamento</h4>
+      <p>{{orientamento}}</p>
+    </div>
+  </div>
+  <div class="spacingRow">
+    <h4>Altro</h4>
+    <p>{{altro}}</p>
+  </div>
+  <button class="btn" type="submit" (click)="return()">Torna al Configuratore</button>
+  <button class="btn" type="submit" (click)="next()">Concludi e salva il progetto</button>
 </div>
