@@ -1,31 +1,30 @@
-<div class="container container-esterno position-absolute top-50 start-50 translate-middle" id="container">
-  <div class="row">
-    <div class="col"></div>
-    <div class="col-8">
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
       <h2>Inserisci le seguenti informazioni</h2>
       <form #f="ngForm">
         <div class="container">
-          <div class="row">
-            <div class="col">
+          <div class="row justify-content-md-center">
+            <div class="col-md-auto">
               <input type="text" class="form-control" placeholder="Ragione Sociale" name="ragioneSociale"
                 [(ngModel)]="ragioneSociale" required #ragione_sociale="ngModel">
               <span class="help-block" *ngIf="!ragione_sociale.valid && ragione_sociale.touched">Questo campo non può
                 rimanere vuoto</span>
             </div>
-            <div class="col">
+            <div class="col-md-auto">
               <input type="text" numbersOnly class="form-control" placeholder="Partita IVA" name="partitaIva"
                 [(ngModel)]="partitaIva" maxlength="11" #partita_iva="ngModel">
               <span class="help-block" *ngIf="!partita_iva.valid && partita_iva.touched">Inserisci una partita IVA
                 valida</span>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
+          <div class="row justify-content-md-center">
+            <div class="col-md-auto">
               <input type="text" class="form-control" placeholder="Città" name="citta" [(ngModel)]="cittaUtente"
                 required #citta="ngModel">
               <span class="help-block" *ngIf="!citta.valid && citta.touched">Questo campo non può rimanere vuoto</span>
             </div>
-            <div class="col">
+            <div class="col-md-auto">
               <input type="text" class="form-control" placeholder="Indirizzo" name="indirizzo"
                 [(ngModel)]="indirizzoUtente" required #indirizzo="ngModel">
               <span class="help-block" *ngIf="!indirizzo.valid && indirizzo.touched">Questo campo non può rimanere
@@ -57,5 +56,4 @@
         </div>
       </form>
     </div>
-    <div class="col"></div>
   </div>
