@@ -142,11 +142,7 @@ export class AltroFormComponent {
       this.dropdown1 = 'Classiche';
     } else {
       this.dataMeccaniche = localStorage.getItem('Meccaniche');
-      console.log(this.dataMeccaniche);
-
       this.dropdown1 = this.dataMeccaniche;
-      console.log(this.dropdown1);
-
     }
   }
   checkLocalStoragePickup() {
@@ -173,11 +169,7 @@ export class AltroFormComponent {
     if (localStorage.getItem('Battipenna') === null) {
       localStorage.setItem('Battipenna', 'Si');
       this.dropdown4 = 'Si';
-      console.log('sono qui');
-
     } else {
-      console.log('sono nell else');
-
       this.dropdown4 = this.dataBattipenna;
       this.dataBattipenna = localStorage.getItem('Battipenna');
       this.dropdown4 = this.dataBattipenna;

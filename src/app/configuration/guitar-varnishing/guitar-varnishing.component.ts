@@ -243,8 +243,6 @@ export class GuitarVarnishingComponent {
     } else {
       this.dataColore = localStorage.getItem('Colore Verniciatura');
       this.valueColore = this.dataColore;
-      console.log('value' + this.valueColore);
-
     }
   }
 }
