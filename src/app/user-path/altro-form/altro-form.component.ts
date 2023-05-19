@@ -78,7 +78,6 @@ export class AltroFormComponent {
 
   onTextareaInput(event: any): void {
     const value = event.target.value
-    console.log(value);
     this.data = value;
     this.localStorage.setItem('Altro', this.data);
   }
