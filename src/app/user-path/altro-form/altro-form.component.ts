@@ -76,8 +76,9 @@ export class AltroFormComponent {
     this.router.navigate(['user-page']);
   }
 
-  onTextareaInput(colore: any): void {
-    const value = (document.getElementById('TextAltro') as any).value;
+  onTextareaInput(event: any): void {
+    const value = event.target.value
+    console.log(value);
     this.data = value;
     this.localStorage.setItem('Altro', this.data);
   }
@@ -136,6 +137,7 @@ export class AltroFormComponent {
     const value = event.target.value;
     this.localStorage.setItem('Altro', value);
   }
+
   checkLocalStorageMeccaniche() {
     if (localStorage.getItem('Meccaniche') === null) {
       localStorage.setItem('Meccaniche', 'Classiche');
