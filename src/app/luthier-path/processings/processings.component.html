@@ -2,29 +2,29 @@
   <div class="row">
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 1, 'pageactive': this.serviceWood.selectedTab != 1}"
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 1, 'pageactive': this.serviceWood.selectedTab != 1, 'displaynone': this.displayTabs && this.serviceWood.selectedTab != 1}"
         aria-current="page">Stili chitarre</a>
       </li>
       <li class="nav-item" *ngIf="showWoods">
-        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 2, 'pageactive': this.serviceWood.selectedTab != 2}">Legni</a>
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 2, 'pageactive': this.serviceWood.selectedTab != 2, 'displaynone': this.displayTabs && this.serviceWood.selectedTab != 2}">Legni</a>
       </li>
       <li class="nav-item" *ngIf="showListParts">
-        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 3, 'pageactive': this.serviceWood.selectedTab != 3}">Legno Body</a>
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 3, 'pageactive': this.serviceWood.selectedTab != 3, 'displaynone': this.displayTabs && this.serviceWood.selectedTab != 3}">Legno Body</a>
       </li>
       <li class="nav-item" *ngIf="showListParts">
-        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 4, 'pageactive': this.serviceWood.selectedTab != 4}">Legno Top</a>
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 4, 'pageactive': this.serviceWood.selectedTab != 4, 'displaynone': this.displayTabs && this.serviceWood.selectedTab != 4}">Legno Top</a>
       </li>
       <li class="nav-item" *ngIf="showListParts">
-        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 5, 'pageactive': this.serviceWood.selectedTab != 5}">Legno Manico</a>
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 5, 'pageactive': this.serviceWood.selectedTab != 5, 'displaynone': this.displayTabs && this.serviceWood.selectedTab != 5}">Legno Manico</a>
       </li>
       <li class="nav-item" *ngIf="showListParts">
-        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 6, 'pageactive': this.serviceWood.selectedTab != 6}">Legno Tastiera</a>
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 6, 'pageactive': this.serviceWood.selectedTab != 6, 'displaynone': this.displayTabs && this.serviceWood.selectedTab != 6}">Legno Tastiera</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 7, 'pageactive': this.serviceWood.selectedTab != 7}">Verniciature</a>
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 7, 'pageactive': this.serviceWood.selectedTab != 7, 'displaynone': this.displayTabs && this.serviceWood.selectedTab != 7}">Verniciature</a>
       </li>
       <li class="nav-item" *ngIf="other">
-        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 8, 'pageactive': this.serviceWood.selectedTab != 8}">Accessori</a>
+        <a class="nav-link" [ngClass]="{'active': this.serviceWood.selectedTab == 8, 'pageactive': this.serviceWood.selectedTab != 8, 'displaynone': this.displayTabs && this.serviceWood.selectedTab != 8}">Accessori</a>
       </li>
     </ul>
   </div>

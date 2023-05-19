@@ -26,6 +26,7 @@ export class ProcessingsComponent {
   showListParts: boolean = false;
   other: Boolean = false;
   finalize: Boolean = false;
+  displayTabs: Boolean = false;
 
   constructor(
     public formDataService: LuthierRegistrationServiceService,
@@ -39,6 +40,7 @@ export class ProcessingsComponent {
       this.showListParts = true;
       this.other = true;
       this.finalize = true;
+      this.displayTabs = true;
     } else {
       this.showWoods = true;
       this.other = false;
