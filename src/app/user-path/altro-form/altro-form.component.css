@@ -5,8 +5,8 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  padding-top: 15px;
-  padding-bottom: 25px;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 button {
@@ -57,35 +57,10 @@ label {
   margin-top: 40px;
 }
 
-#TextColore{
-  margin-top: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+textarea {
+  margin-top: 1.5%;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
 }
 
-.alert {
-  margin-top: 35px;
-}
-
-#altro{
-  font-size: medium;
-  width: 600px;
-  padding-top: 75px;
-  text-align:left;
-}
-
-#altroImg{
- padding-top: 15px;
- float: right;
- padding-right: 10px;
-}
-
-#TextAltro{
-
-  display: block;
-  margin: 0 auto;
-}
-
-#altroContainer {
-  margin: 0 auto;
-}
