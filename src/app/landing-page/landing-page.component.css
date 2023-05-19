@@ -51,7 +51,7 @@ button:focus {
 .img-fluid{
   padding-top: 2%;
   padding-bottom: 2%;
-  border-radius: 10%;
+  border-radius: 30px;
   filter: drop-shadow(7px 7px 7px #666666);
   -webkit-filter: drop-shadow(7px 7px 7px #666666);
 }
