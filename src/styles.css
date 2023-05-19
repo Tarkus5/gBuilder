@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #252422;
+}
+
 .owl-theme .owl-nav.disabled+.owl-dots {
   margin-top: 30px;
   margin-bottom: 20px;
