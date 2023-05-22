@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "gbuilder",
     "public": "dist\\g-config",
     "ignore": [
       "firebase.json",

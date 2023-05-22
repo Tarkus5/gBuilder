@@ -31,10 +31,11 @@ export class UserPageComponent implements OnInit, OnChanges {
     if (user != null) {
       this.isSignedIn = true;
       const dbInstance = collection(this.fs, 'liutai');
-      getDocs(dbInstance).then((data) => {
+      getDocs(dbInstance).then(async (data) => {
         this.data = [
-          ...data.docs.map((item) => {
+          ...await data.docs.map((item) => {
             if (item.get('mail') === userMail) {
+              console.log(item.data())
               return { ...item.data(), id: item.get('mail') };
             }
             else {

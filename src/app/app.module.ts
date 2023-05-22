@@ -30,6 +30,7 @@ import { EndingFormComponent } from './user-path/ending-form/ending-form.compone
 import { AltroFormComponent } from './user-path/altro-form/altro-form.component';
 import { FinalizeComponent } from './user-path/finalize/finalize.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { JoinPipe } from './global-services/join.pipe';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     AltroFormComponent,
     FinalizeComponent,
     SendingFormComponent,
-    EndingFormComponent
+    EndingFormComponent,
+    JoinPipe,
   ],
   imports: [
     BrowserModule,
