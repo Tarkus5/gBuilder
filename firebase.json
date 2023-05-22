@@ -1,1 +1,17 @@
-{}
+{
+  "hosting": {
+    "site": "gbuilder",
+    "public": "dist\\g-config",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

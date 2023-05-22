@@ -51,8 +51,8 @@
     <textarea id="TextColore" name="TextColore" [value]="valueColore" (input)="onTextareaInput($event)" placeholder="Scrivi qui il colore"></textarea>
   </div>
   <div class="row rowButtons justify-content-center">
-    <div class="col-auto">
-      <button class="btn btn-back" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
+    <div class="col-auto d-grid gap-2 mx-auto">
+      <button class="btn" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
       <button class="btn" type="submit" (click)="emitEventFinalize()" [disabled]="this.finalizeDisable" *ngIf="finalizeButton">Finalizza</button>
       <button class="btn" type="submit" (click)="this.emitEvent()" [disabled]="this.nextDisabled" *ngIf="nextButton" >Avanti</button>
     </div>

@@ -191,9 +191,9 @@
     </div>
   </div>
   <div class="row rowButtons justify-content-center" *ngIf="showButton">
-    <div class="col-auto">
+    <div class="col-auto d-grid gap-2 mx-auto">
       <button class="btn btn-back" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
-      <button class="btn" type="submit" (click)="this.emitEvent()" [disabled]="this.nextDisabled">Avanti</button>
+      <button class="btn btn-avanti" type="submit" (click)="this.emitEvent()" [disabled]="this.nextDisabled">Avanti</button>
     </div>
   </div>
 </div>

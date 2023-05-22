@@ -2,7 +2,7 @@
   <div class="row row-cols-auto justify-content-md-center">
     <div class="col">
       <form action="">
-        <img class="img-fluid" src="./../../../assets/Guitars/Stratocaster2.png" alt="ST Type" width="78">
+        <img class="img-fluid" src="./../../../assets/Guitars/Stratocaster2.png" alt="ST Type" width="66">
         <br>
         <label class="guitarTypeLabel" for="stType"><strong>ST Style</strong></label>
         <br>
@@ -11,7 +11,7 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="img-fluid" src="./../../../assets/Guitars/Telecaster.png" alt="T Type" width="100">
+        <img class="img-fluid" src="./../../../assets/Guitars/Telecaster.png" alt="T Type" width="85">
         <br>
         <label class="guitarTypeLabel" for="teleType"><strong>T Style</strong></label>
         <br>
@@ -20,7 +20,7 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="img-fluid" src="./../../../assets/Guitars/LesPaul.png" alt="LP Type" width="67.5">
+        <img class="img-fluid" src="./../../../assets/Guitars/LesPaul.png" alt="LP Type" width="57">
         <br>
         <label class="guitarTypeLabel" for="lesPaulType"><strong>LP Style</strong></label>
         <br>
@@ -29,7 +29,7 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="img-fluid" src="./../../../assets/Guitars/Diavoletto.png" alt="SG Type" width="100">
+        <img class="img-fluid" src="./../../../assets/Guitars/Diavoletto.png" alt="SG Type" width="85">
         <br>
         <label class="guitarTypeLabel" for="sgType"><strong>SG Style</strong></label>
         <br>
@@ -38,7 +38,7 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="img-fluid" src="./../../../assets/Guitars/335.png" alt="HB Type" width="100">
+        <img class="img-fluid" src="./../../../assets/Guitars/335.png" alt="HB Type" width="85">
         <br>
         <label class="guitarTypeLabel" for="hollowbodyType"><strong>HB Style</strong></label>
         <br>
@@ -47,16 +47,7 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="img-fluid" src="./../../../assets/Guitars/FlyingV.png" alt="V Type" width="100">
-        <br>
-        <label class="guitarTypeLabel" for="vType"><strong>V Style</strong></label>
-        <br>
-        <input class="form-check-input" type="checkbox" id="Flying V" name="Flying V"  [(ngModel)]="v" [(ngModel)]="checkbox6" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox6"  >
-      </form>
-    </div>
-    <div class="col">
-      <form action="">
-        <img class="img-fluid" src="./../../../assets/Guitars/Explorer.png" alt="EX Type" width="82">
+        <img class="img-fluid" src="./../../../assets/Guitars/Explorer.png" alt="EX Type" width="69">
         <br>
         <label class="guitarTypeLabel" for="Explorer"><strong>EX Style</strong></label>
         <br>
@@ -65,7 +56,16 @@
     </div>
     <div class="col">
       <form action="">
-        <img class="img-fluid" src="./../../../assets/Guitars/Special2.png" alt="Special Type" width="88.5">
+        <img class="img-fluid" src="./../../../assets/Guitars/FlyingV.png" alt="V Type" width="85">
+        <br>
+        <label class="guitarTypeLabel" for="vType"><strong>V Style</strong></label>
+        <br>
+        <input class="form-check-input" type="checkbox" id="Flying V" name="Flying V"  [(ngModel)]="v" [(ngModel)]="checkbox6" (change)="onCheckboxChange()" [disabled]="disableCheckboxes && !checkbox6"  >
+      </form>
+    </div>
+    <div class="col">
+      <form action="">
+        <img class="img-fluid" src="./../../../assets/Guitars/Special2.png" alt="Special Type" width="75">
         <br>
         <label class="guitarTypeLabel" for="specialType"><strong>Special Style</strong></label>
         <br>
@@ -74,7 +74,7 @@
     </div>
   </div>
   <div class="row rowButtons justify-content-center" *ngIf="showAvanti">
-    <div class="col-auto">
+    <div class="col-auto d-grid gap-2 mx-auto">
       <button class="btn" type="submit" (click)="this.emitEvent()" [disabled]="this.nextDisabled" >Avanti</button>
     </div>
   </div>

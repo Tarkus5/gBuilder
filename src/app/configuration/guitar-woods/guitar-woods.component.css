@@ -40,8 +40,12 @@ button.ghost {
 	border-color: #FFFFFF;
 }
 
-.btn-back{
-  margin-right: 20px;
+.btn-avanti {
+  margin-top: 5px;
+}
+
+.btn-back {
+  margin-top: 5px;
 }
 
 .form-check-input {
