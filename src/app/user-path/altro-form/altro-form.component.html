@@ -157,7 +157,7 @@
     <div class="col">
       <form action="">
         <div class="alert alert-dark mt-4" role="alert">
-          <textarea rows="4" cols="35"
+          <textarea rows="4" cols="25"
             placeholder="Aumenta il livello di personalizzazione:
 scrivi qui eventuali altre modifiche!"
             name="TextAltro" (input)="onTextareaInput($event)" [value]="dropdown11"></textarea>
@@ -166,8 +166,8 @@ scrivi qui eventuali altre modifiche!"
     </div>
   </div>
   <div class="row rowButtons justify-content-md-center">
-    <div class="col">
-      <button class="btn btn-back" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
+    <div class="col-auto d-grid gap-2 mx-auto">
+      <button class="btn" type="submit" (click)="this.emitEventPrevious()">Indietro</button>
       <button class="btn" type="submit" (click)="emitEventFinalize()"
         [disabled]="this.finalizeDisable">Finalizza</button>
     </div>
